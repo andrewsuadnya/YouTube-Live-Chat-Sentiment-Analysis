@@ -6,6 +6,7 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 
 ## 🔧 Tech Stack
 ![Image](https://github.com/user-attachments/assets/72cbdd49-ff94-4b62-8c49-65f2d343a95c)
+![SKRIPSI - Page 1 (2)](https://github.com/user-attachments/assets/7898a5b2-6908-4a3e-9671-d5c6899e4cf7)
 
 - **Apache Kafka** – Message broker for real-time data ingestion & real-time data streaming
 - **Apache Spark Structured Streaming** – Stream processing engine
@@ -95,5 +96,3 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 ## 📝 License
 
 This project is licensed under the MIT License.
-![SKRIPSI - Page 1](https://github.com/user-attachments/assets/8b2e061e-dd81-4b87-9904-5a4e23cb49d4)
-![SKRIPSI - Page 1 (1)](https://github.com/user-attachments/assets/167f220f-6972-4f73-bbf8-0384a88efb98)
