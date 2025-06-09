@@ -62,6 +62,9 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 ![Image](https://github.com/user-attachments/assets/97376a82-9684-4f4a-8068-4ae92f6f6f7c)
 
 ![Image](https://github.com/user-attachments/assets/76817959-8514-4dca-95b8-7f745d86bd80)
+
+![Image](https://github.com/user-attachments/assets/a44c717f-5ffc-4f4f-a730-068bee485466)
+
 ---
 
 ## 🧪 Testing and Performance
