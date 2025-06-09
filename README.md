@@ -1,6 +1,6 @@
 # 📱SKRIPSI - YouTube Live Chat Sentiment Analysis (Real-Time Big Data Pipeline)
 
-A real-time system for ingesting, processing, and analyzing YouTube live chat comments using Big Data technologies. Built with **Apache Kafka**, **Apache Spark Structured Streaming**, **Elasticsearch** and **Kibana**, this system performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on a live dashboard.
+A real-time system for ingesting, processing, and analyzing YouTube live chat comments using Big Data technologies. Built with **Apache Kafka**, **Apache Spark Structured Streaming**, **Elasticsearch**, and **Kibana**, this system performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on a live dashboard built with **React** and **Socket.IO**.
 
 ---
 
@@ -54,8 +54,8 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 - Real-time ingestion of live chat from YouTube via YouTube Data API v3
 - Stream processing using Apache Kafka and Spark Structured Streaming
 - Lexicon-based sentiment classification using VADER and TextBlob
-- Visualization of sentiment distribution on a React-based dashboard
 - Additional dashboard analytics via Kibana
+- Visualization of sentiment distribution on a React-based dashboard
 
 ![Image](https://github.com/user-attachments/assets/e0d0ca6f-3710-4018-9cc4-d2dae758dbb9)
 
