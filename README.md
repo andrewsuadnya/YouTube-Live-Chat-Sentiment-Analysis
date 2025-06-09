@@ -62,6 +62,8 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 ![Image](https://github.com/user-attachments/assets/97376a82-9684-4f4a-8068-4ae92f6f6f7c)
 
 ![Image](https://github.com/user-attachments/assets/76817959-8514-4dca-95b8-7f745d86bd80)
+![Sidang Skripsi (1)](https://github.com/user-attachments/assets/ce9fa365-6c4e-4436-98c8-1142a5fe6fe8)
+
 
 ![Image](https://github.com/user-attachments/assets/a44c717f-5ffc-4f4f-a730-068bee485466)
 
