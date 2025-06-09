@@ -95,3 +95,5 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 ## 📝 License
 
 This project is licensed under the MIT License.
+![SKRIPSI - Page 1](https://github.com/user-attachments/assets/8b2e061e-dd81-4b87-9904-5a4e23cb49d4)
+![SKRIPSI - Page 1 (1)](https://github.com/user-attachments/assets/167f220f-6972-4f73-bbf8-0384a88efb98)
