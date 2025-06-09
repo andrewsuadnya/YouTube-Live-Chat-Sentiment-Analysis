@@ -1,0 +1,130 @@
+# UJI KECEPATAN
+
+# Code awal
+
+spark = SparkSession.builder \
+.appName("YouTubeLiveChatSentimentAnalysis") \
+.config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-hadoop:8.11.0") \
+.config("spark.executor.memory", "4g") \
+.config("spark.driver.memory", "2g") \
+.config("spark.sql.shuffle.partitions", "10") \
+.config("spark.streaming.backpressure.enabled", "true") \
+.config("spark.streaming.kafka.maxRatePerPartition", "100") \
+.getOrCreate()
+
+hasilnya:
+
+- **20:58:18 → 20:58:29** = 11 detik
+- **20:58:29 → 20:58:34** = 5 detik
+- **20:58:34 → 20:58:39** = 5 detik
+- **20:58:39 → 20:58:55** = 16 detik
+- **20:58:55 → 20:59:01** = 6 detik
+- **20:59:01 → 20:59:05** = 4 detik
+- **20:59:05 → 20:59:11** = 6 detik
+- **20:59:11 → 20:59:16** = 5 detik
+- **20:59:16 → 20:59:21** = 5 detik
+- **20:59:21 → 20:59:26** = 5 detik
+- **20:59:26 → 20:59:32** = 6 detik
+- **20:59:32 → 21:00:03** = 31 detik
+- **21:00:03 → 21:00:19** = 16 detik
+- **21:00:19 → 21:00:22** = 3 detik
+- **21:00:22 → 21:00:26** = 4 detik
+- **21:00:26 → 21:00:30** = 4 detik
+
+### uji coba kedua
+
+spark = SparkSession.builder \
+.appName("YouTubeLiveChatSentimentAnalysis") \
+.config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-hadoop:8.11.0") \
+.config("spark.executor.memory", "4g") \
+.config("spark.driver.memory", "2g") \
+.config("spark.sql.shuffle.partitions", "8") \
+.config("spark.streaming.backpressure.enabled", "true") \
+.config("spark.streaming.kafka.maxRatePerPartition", "200") \
+.getOrCreate()
+
+hasilnya:
+
+- **21:24:18 → 21:24:24** = **6 detik**
+- **21:24:24 → 21:24:30** = **6 detik**
+- **21:24:30 → 21:24:34** = **4 detik**
+- **21:24:34 → 21:24:40** = **6 detik**
+- **21:24:40 → 21:24:46** = **6 detik**
+- **21:24:46 → 21:24:50** = **4 detik**
+- **21:24:50 → 21:24:56** = **6 detik**
+- **21:24:56 → 21:25:02** = **6 detik**
+- **21:25:02 → 21:25:06** = **4 detik**
+- **21:25:06 → 21:25:12** = **6 detik**
+- **21:25:12 → 21:25:18** = **6 detik**
+- **21:25:18 → 21:25:21** = **3 detik**
+- **21:25:21 → 21:25:28** = **7 detik**
+- **21:25:28 → 21:25:34** = **6 detik**
+- **21:25:34 → 21:25:38** = **4 detik**
+
+### Code ketiga
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+.appName("YouTubeLiveChatSentimentAnalysis") \
+.config("spark.jars.packages",
+"org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,"
+"org.elasticsearch:elasticsearch-hadoop:8.11.0") \
+.config("spark.executor.memory", "6g") \  # Meningkatkan memori executor
+.config("spark.driver.memory", "4g") \  # Meningkatkan memori driver
+.config("spark.executor.cores", "2") \  # Menambah jumlah core per executor
+.config("spark.sql.shuffle.partitions", "6") \  # Kurangi partisi jika data kecil
+.config("spark.default.parallelism", "8") \  # Meningkatkan parallelism
+.config("spark.streaming.backpressure.enabled", "true") \  # Hindari overload
+.config("spark.streaming.kafka.maxRatePerPartition", "300") \  # Lebih agresif dalam membaca Kafka
+.config("spark.sql.execution.arrow.pyspark.enabled", "true") \  # Aktifkan Apache Arrow untuk pandas_udf
+.config("spark.cleaner.referenceTracking.cleanCheckpoints", "true") \  # Optimasi garbage collection
+.config("spark.memory.fraction", "0.7") \  # Lebih banyak memori untuk eksekusi
+.config("spark.memory.storageFraction", "0.3") \  # Simpan cache lebih efisien
+.getOrCreate()
+
+hasilnya:
+
+23:00:53 → 23:00:58 = 5 detik
+23:00:58 → 23:01:03 = 5 detik
+23:01:03 → 23:01:09 = 6 detik
+23:01:09 → 23:01:14 = 5 detik
+23:01:14 → 23:01:19 = 5 detik
+23:01:19 → 23:01:24 = 5 detik
+23:01:24 → 23:01:29 = 5 detik
+23:01:29 → 23:01:35 = 6 detik
+23:01:35 → 23:01:37 = 2 detik
+23:01:37 → 23:01:40 = 3 detik
+23:01:40 → 23:01:45 = 5 detik
+23:01:45 → 23:01:50 = 5 detik
+23:01:50 → 23:02:01 = 11 detik
+23:02:01 → 23:02:06 = 5 detik
+
+### Code terakhir (final)
+
+spark = SparkSession.builder \
+.appName("YouTubeLiveChatSentimentAnalysis") \
+.config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-hadoop:8.11.0") \
+.config("spark.executor.memory", "6g") \
+.config("spark.driver.memory", "4g") \
+.config("spark.sql.shuffle.partitions", "5") \
+.config("spark.streaming.backpressure.enabled", "true") \
+.config("spark.streaming.kafka.maxRatePerPartition", "200") \
+.getOrCreate()
+
+hasilnya:
+
+22:48:33 → 22:48:35 = 2 detik
+22:48:35 → 22:48:41 = 6 detik
+22:48:41 → 22:48:43 = 2 detik
+22:48:43 → 22:48:46 = 3 detik
+22:48:46 → 22:48:48 = 2 detik
+22:48:48 → 22:48:51 = 3 detik
+22:48:51 → 22:48:56 = 5 detik
+22:48:56 → 22:49:02 = 6 detik
+22:49:02 → 22:49:04 = 2 detik
+22:49:04 → 22:49:07 = 3 detik
+22:49:07 → 22:49:12 = 5 detik
+22:49:12 → 22:49:17 = 5 detik
+22:49:17 → 22:49:23 = 6 detik
+22:49:23 → 22:49:28 = 5 detik

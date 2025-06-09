@@ -1,0 +1,8 @@
+pyspark
+vaderSentiment
+textblob
+python-dotenv
+nltk
+pytz
+pandas
+pyarrow

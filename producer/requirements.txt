@@ -1,0 +1,5 @@
+google-api-python-client
+kafka-python
+python-dotenv
+pytz
+retrying

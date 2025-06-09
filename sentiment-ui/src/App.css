@@ -1,0 +1,229 @@
+/* Styling utama */
+body {
+  background-color: #000000;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Wrapper agar jumlah pesan, chat box, dan pie chart sejajar */
+.chat-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Kotak jumlah penonton */
+.viewer-count {
+  background-color: #181717;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.youtube-logo {
+  width: 200px; /* Sesuaikan ukuran logo */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -15px;
+  margin-top: -15px;
+}
+
+.viewer-count h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.viewer-count p {
+  font-size: 20px;
+  margin-top: -5px;
+  color: #aaa;
+}
+
+/* Kotak jumlah pesan */
+.message-count {
+  background-color: #181717;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message-count h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.message-count p {
+  font-size: 18px;
+  margin-top: -5px;
+  color: #aaa;
+}
+
+/* Styling statistik sentimen */
+.sentiment-stats {
+  margin-top: 25px;
+  margin-left: 30px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.positive-text, .negative-text, .neutral-text {
+  margin-left: -30px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.channel-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.channel-logo {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff0000;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.video-title {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 260px; /* Batasi lebar agar tidak terlalu panjang */
+  word-wrap: break-word; /* Memastikan teks tidak keluar dari area */
+  color: #ffcc00; /* Warna emas agar mencolok */
+  background-color: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+  margin-bottom: -15px;
+}
+
+/* Kotak chat */
+.chat-container {
+  max-width: 900px;
+  width: 100%;
+  padding: 15px;
+  background-color: #181717;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+/* Kotak chat */
+.chat-box {
+  border: 1px solid #000000;
+  padding: 10px;
+  border-radius: 8px;
+  height: 650px;
+  overflow-y: auto;
+  background-color: #171616;
+  overflow-x: hidden;
+}
+
+/* Styling pesan */
+.chat-message {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efek hover untuk setiap pesan */
+.chat-message:hover {
+  transform: scale(1.02);
+  transition: transform 0.15s ease-in-out;
+}
+
+/* Warna berdasarkan sentimen */
+.positive {
+  background-color: #19a33a;
+  color: #d4edda;
+}
+
+.negative {
+  background-color: #9d1724;
+  color: #f8d7da;
+}
+
+.neutral {
+  background-color: #aa9e1b;
+  color: #fff3cd;
+}
+
+/* Loading text */
+.loading {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Scrollbar */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+/* Format waktu dan nama */
+.author {
+  font-weight: normal;
+  color: white;
+}
+
+/* Styling untuk setiap chart */
+.chart-container {
+  background-color: #181717;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px; /* Menambahkan jarak antar grafik */
+}
+
+/* Wrapper untuk semua grafik */
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Menambah jarak antar grafik */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .chat-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message-count, .viewer-count {
+    min-width: 100px;
+  }
+}

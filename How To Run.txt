@@ -1,0 +1,73 @@
+HITUNG SELISIH TIAP PESAN DI PRODUCER.LOG DAN SPARK.LOG:
+python logs/hitung_selisih.py
+
+cd skripsi (spark)
+cd skripsi (spark)/sentiment-backend
+cd skripsi (spark)/sentiment-ui
+
+
+HAPUS SEMUA VOLUMES:
+docker volume prune -f -a
+
+HAPUS SEMUA BUILDS:
+docker builder prune -f -a
+
+HAPUS SEMUA LOGS DI DIREKTORI:
+rmdir /s /q "logs\producer" "logs\spark"
+
+
+KAFKA TOPIC!!
+Kirim Pesan ke Kafka Topic:
+docker exec -it kafka kafka-console-producer --broker-list kafka:9092 --topic youtube_live_chat
+
+CONTOH PESAN:
+{"author": "Rod Camp", "message": "i love this news", "published_at": "2025-03-11T23:36:33.148196+08:00"}
+
+CEK ISI KAFKA TOPIC:
+docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic youtube_live_chat --from-beginning
+
+
+Akses Spark UI:
+http://localhost:4040
+
+
+ELASTICSEARCH!!!
+MENGECEK JUMLAH DATA YANG MASUK KE ELASTICSEARCH:
+curl -X GET "http://localhost:9200/sentiment-analysis/_count?pretty"
+
+MELIHAT STRUKTUR DATA YANG MASUK KE ELASTICSEARCH:
+curl -X GET "http://localhost:9200/sentiment-analysis/_mapping?pretty"
+
+MELIHAT STRUKTUR DAN HASIL SENTIMEN:                  
+curl -X GET "http://localhost:9200/sentiment-analysis/_search?pretty"
+
+
+HOW TO RUN
+docker-compose up --build -d    (PERTAMA KALI RUN)
+docker-compose up -d            (SETELAHNYA TIAP KALI MO RUN)
+http://localhost:5601           (MENGAKSES KIBANA)
+
+
+DEMO!!!
+docker logs -f producer
+docker logs -f spark
+docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic youtube_live_chat --from-beginning
+
+
+docker-compose stop             (KALAU CUMAN STOP UNTUK GANTI LIVE CHAT ID)
+docker-compose down             (STOP SEMUA KONTAINER)
+
+
+
+🚀 Jalankan Frontend (tampilan web)
+
+cd sentiment-backend
+python app.py                   (Pastikan backend Flask sudah berjalan)
+
+cd sentiment-ui
+npm run dev                     (Jalankan frontend)
+
+Buka di browser:
+➜ http://localhost:5173
+
+chat akan muncul dengan warna sesuai sentimen (hijau = positif, merah = negatif, kuning = netral)

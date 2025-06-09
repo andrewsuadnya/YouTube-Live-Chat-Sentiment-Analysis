@@ -1,0 +1,722 @@
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:18.877394
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                                            |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|I hope NPR is banned                                                                                                                                                                               |neutral        |neutral           |neutral        |
+|Low IQ country’s are always at war and we have to babysit                                                                                                                                          |negative       |neutral           |negative       |
+|It is a pleasure to watch and listen to Karoline Leavitt.She is professional, articulate, confident, engaging, knowledgeable, well-versed, pleasant, and courteous to all.                         |positive       |positive          |positive       |
+|dasa                                                                                                                                                                                               |neutral        |neutral           |neutral        |
+|Trump going to cause a war                                                                                                                                                                         |negative       |neutral           |negative       |
+|There are schools in Ireland that have no Irish pupils but filled with foreigners, many of them can't speak English. Europe has open borders.                                                      |negative       |positive          |negative       |
+|wHY CAN'T WOMEN BE ON TIME FOR THINGS?                                                                                                                                                             |neutral        |neutral           |neutral        |
+|Class is in session. 🇺🇲💯                                                                                                                                                                        |neutral        |neutral           |neutral        |
+|This Administration definitely beats the last one! Its literally a daily information dump. I rather be in the know than not knowing anything at all. Total Transparency is all the public asks for.|neutral        |neutral           |neutral        |
+|Let's Siri find their own money. Aint no one should be defunding them.                                                                                                                             |positive       |neutral           |positive       |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:23.020222
++---------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Project 2025: Re-evaluating Social Welfare Programs to rid them of deadbeat collectors.|neutral        |positive          |positive       |
+|can't press alt f4 on a phone                                                          |neutral        |neutral           |neutral        |
++---------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:26.082772
++--------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                   |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------+---------------+------------------+---------------+
+|HAS ANYONE STAYED AROUND D. C BEFORE ? NO JOKE ALL I SEEN WAS G A Y MEN...|negative       |neutral           |negative       |
+|😀                                                                        |positive       |neutral           |positive       |
++--------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:29.743934
++--------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                     |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|☕️                                                                                          |neutral        |neutral           |neutral        |
+|TDS cry cry cry                                                                             |negative       |neutral           |negative       |
+|@Transparent LOLOLOLOLOLOLOL                                                                |neutral        |neutral           |neutral        |
+|Thank you, President Trump! MAGA!!!                                                         |positive       |neutral           |positive       |
+|Trump loves Russia. Biden didn't.                                                           |positive       |neutral           |positive       |
+|BYEE', Suuk'...                                                                             |neutral        |neutral           |neutral        |
+|ATTENTION TO THOSE WITH NO AUDIO/SOUND ISSUES. Press Alt + F4 then Enter                    |negative       |neutral           |negative       |
+|Billybob project 25 is a lie not endorsed by Trump try harder pull your head out of the sand|negative       |negative          |negative       |
+|Karoline Leavitt is the G.O.A.T 🇺🇸                                                        |neutral        |neutral           |neutral        |
+|Yay for elevator music                                                                      |positive       |neutral           |positive       |
++--------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:33.424540
++------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                           |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------------------------------+---------------+------------------+---------------+
+|we don't have alt F4                                              |neutral        |neutral           |neutral        |
+|Trumps Golden Age, not ours!                                      |neutral        |positive          |positive       |
+|I'll be back.                                                     |negative       |negative          |negative       |
+|defund npr and amtrak                                             |neutral        |neutral           |neutral        |
+|Audio is muted Until Karoline comes out. There are no audio issues|negative       |neutral           |negative       |
+|Meow 🐱                                                           |neutral        |neutral           |neutral        |
+|🎤 🎙 🎤 ✔️ ✅️ 1 2 3                                              |neutral        |neutral           |neutral        |
++------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:36.214756
++---------------------------------------------------------+---------------+------------------+---------------+
+|message                                                  |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------------+---------------+------------------+---------------+
+|she's adjusting her leprechaun costume, give her a minute|neutral        |neutral           |neutral        |
++---------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:39.855996
++--------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                           |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|For sale waste land in Iran                                                                                                                       |negative       |negative          |negative       |
+|REAGAN: “Mr. Gorbachev, open this gate! Mr. Gorbachev, tear down this wall!”TRUMP: Putin “genius” and “savvy” for Ukraine invasion. (Feb 23, 2022)|neutral        |neutral           |neutral        |
+|Trump is giving her last minute updates!                                                                                                          |positive       |neutral           |positive       |
+|suzie we love to laugh at his next stupud idea.                                                                                                   |positive       |positive          |positive       |
++--------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:43.691596
++------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                           |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|MAGA 🇺🇸 Republican Party ❤️ MEGA 🇪🇺Patriots Party                                                             |positive       |neutral           |positive       |
+|Pam Bondi is in over her head & submitted her request for a 2-week vacation                                       |neutral        |neutral           |neutral        |
+|Islam is NOT compatible with the west! They want to destroy our values and our country!                           |negative       |negative          |negative       |
+|TRUMP 2028                                                                                                        |neutral        |neutral           |neutral        |
+|@Chris Pierson cause we dont wanna                                                                                |neutral        |neutral           |neutral        |
+|I'm sure the views has value too. said noone                                                                      |positive       |positive          |positive       |
+|COWARD REPORTERS - DO YOUR JOB!!! HOLD TRUMP ACCOUNTABLE!!!                                                       |negative       |neutral           |negative       |
+|Wow, what a treat.Glad I tuned in.Cant wait to see Coroline slam the Fake News when they act stupid,which is daily|negative       |negative          |negative       |
+|Imagine swearing an oath to defend the constitution                                                               |negative       |neutral           |negative       |
++------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:48.847950
++-------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                    |vader_sentiment|textblob_sentiment|final_sentiment|
++-------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|BAN the fake news!!!                                                                       |negative       |negative          |negative       |
+|my you have such a nice big set of .... Ouch! I was just saying SSMack! OK, I won't say it.|positive       |positive          |positive       |
+|Karoline, release the list!!!                                                              |neutral        |neutral           |neutral        |
++-------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:51.801707
++---------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                  |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|🐸SPEED UP CHAT.. NO NEED OR POINT IN SLOWING CHAT✊️ POST A FROG IF YOU AGREE ✊️🐸                       |positive       |neutral           |positive       |
+|AMERICASTAN'S people must be hungry for food there realy need food money trump is despirate for the money|neutral        |neutral           |neutral        |
++---------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:55.225981
++--------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                               |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Release the Trump / Epstein files .                                                   |neutral        |neutral           |neutral        |
+|She's probably changing her sanitary pad.                                             |neutral        |neutral           |neutral        |
+|YARRIX                                                                                |neutral        |neutral           |neutral        |
+|@Kakarot Jenkins George Washington started tariffs; dont blame Trump! It's nothing new|positive       |positive          |positive       |
+|Has Karoline beeb DOGEd?                                                              |neutral        |neutral           |neutral        |
+|Happy St Patrick’s Day 🍀🍀🍀🍀                                                       |positive       |positive          |positive       |
+|Are going to see green                                                                |neutral        |negative          |negative       |
++--------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:06:59.676351
++-----------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                  |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|heck with it all. I'll just turn into a lesbian male and let the gas station sort it out.|negative       |negative          |negative       |
+|Vance/Trump 2028! 🇺🇸                                                                   |neutral        |neutral           |neutral        |
+|MAGA controlled by billionaires                                                          |neutral        |neutral           |neutral        |
+|silence is just unappealing                                                              |neutral        |negative          |negative       |
++-----------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:04.945459
++------------------------+---------------+------------------+---------------+
+|message                 |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------+---------------+------------------+---------------+
+|The world loves MAGA!!!!|positive       |neutral           |positive       |
++------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:11.783463
++----------------------------------------------------+---------------+------------------+---------------+
+|message                                             |vader_sentiment|textblob_sentiment|final_sentiment|
++----------------------------------------------------+---------------+------------------+---------------+
+|🐸                                                  |neutral        |neutral           |neutral        |
+|J D VANCE 2028🇺🇸                                  |neutral        |neutral           |neutral        |
+|PRAYING FOR THIS NATION AND TRUMP AND VICE PRESIDENT|positive       |neutral           |positive       |
++----------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:15.490592
++-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                              |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Karoline is the 👌 best.                                                                                                                             |positive       |positive          |positive       |
+|ATTENTION TO THOSE WITH NO AUDIO/SOUND ISSUES. Press Alt + F4 then Enter. FOR ANDROID USERS > Hold down the power button on your phone for 30 seconds|negative       |neutral           |negative       |
+|might be slightly radioactive                                                                                                                        |neutral        |negative          |negative       |
+|prod release faillllllllllllllll                                                                                                                     |neutral        |neutral           |neutral        |
+|Donald Trump but he's a rapper: Donald Lil' Pump                                                                                                     |neutral        |neutral           |neutral        |
+|fashionably late as usual Miss Karoline                                                                                                              |negative       |negative          |negative       |
+|Is she down on her knees? Why is she late?                                                                                                           |neutral        |negative          |negative       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:20.929283
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                                                |vader_sentiment|textblob_sentiment|final_sentiment|
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|hello is this ✡️ thing on or what?                                                                                                                                                                     |neutral        |neutral           |neutral        |
+|you want to know the truth about islam and all the bs going on? here: they dont like USA freedom of speech exposes their corruption in foreign nations. 2. saudi arabia want to whiten their skin more-|negative       |negative          |negative       |
+|@WYR agreed                                                                                                                                                                                            |positive       |neutral           |positive       |
+|libs lighting tesla on fire in a liberal state which is probably driven by a dem in the first place.. thats how smart the left are... let them eat                                                     |positive       |positive          |positive       |
+|Project 2025: Prioritizing traditional family stability. ALL IN ON THAT!                                                                                                                               |neutral        |neutral           |neutral        |
+|the question is not if we will see green, but how much green we will see                                                                                                                               |neutral        |negative          |negative       |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:23.953539
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                    |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Let’s watch them defend the judge’s decision and have a problem with sending these murders and gang bangers out of America it’s incredible they are openly arguing this lol|negative       |positive          |negative       |
+|She's late                                                                                                                                                                 |neutral        |negative          |negative       |
+|Atleast put something else on. Instead of just waiting here for this conference                                                                                            |neutral        |neutral           |neutral        |
+|promises made, promises kept!! #MAGA #AmericaFirst #MAHA #USA ❤️🤍💙🇺🇲🥳                                                                                                 |positive       |neutral           |positive       |
+|I have a turd sandwich for democrats..                                                                                                                                     |neutral        |neutral           |neutral        |
+|late                                                                                                                                                                       |neutral        |negative          |negative       |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:27.390760
++---------------------+---------------+------------------+---------------+
+|message              |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------+---------------+------------------+---------------+
+|The world hates maga!|negative       |neutral           |negative       |
++---------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:31.500409
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                                            |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|JD Vance 2028!                                                                                                                                                                                     |neutral        |neutral           |neutral        |
+|exposed live                                                                                                                                                                                       |negative       |positive          |negative       |
+|TRUMP refuses to call Putin a dictator. ''You called Zelensky a dictator. Would you use the same words for Putin?'' - ''I don't use those words lightly.'' ----- MAKE RUSSIAN FASCISTS GREAT AGAIN!|positive       |positive          |positive       |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:34.945357
++-----------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                      |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------+---------------+------------------+---------------+
+|☘️☘️☘️                                                                       |neutral        |neutral           |neutral        |
+|Jesus is King!                                                               |neutral        |neutral           |neutral        |
+|TUCKER CARLSON 2028                                                          |neutral        |neutral           |neutral        |
+|Need to get rid of the liberal supreme justice`s.                            |positive       |neutral           |positive       |
+|Chris trying to change tradition with women                                  |neutral        |neutral           |neutral        |
+|Where are the Epstein, JFK, UFO, Martin Luther King, and Bobby Kennedy files?|neutral        |neutral           |neutral        |
+|@Beardedroofer iagree                                                        |neutral        |neutral           |neutral        |
++-----------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:38.968232
++------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                         |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Lexington Wa USA 🇺🇸 in the House                                                                                                              |neutral        |neutral           |neutral        |
+|Get lost trolls 😡                                                                                                                              |negative       |neutral           |negative       |
+|Pam Bondie is over Your head. short man                                                                                                         |neutral        |neutral           |neutral        |
+|Tax cuts to elites                                                                                                                              |negative       |neutral           |negative       |
+|People need money, make it rain                                                                                                                 |neutral        |neutral           |neutral        |
+|Drain the swamp Don!                                                                                                                            |neutral        |neutral           |neutral        |
+|Go Trump!!                                                                                                                                      |neutral        |neutral           |neutral        |
+|🐸FROGS ARE HEROES 🏅SPEAK BETWEEN FROGS TO BE A PART OF FROG CLUB.. NO REGISTRATION REQUIRED..WE ARE DECENTRALIZED AGAINST THE WOKE LEFT✊🇺🇸🐸|positive       |neutral           |positive       |
+|@BillyBob He might not agree with all aspects of Project 2025, but he certainly wouldn't condone the wars of the Biden Admin.                   |positive       |positive          |positive       |
+|Best President 🥰                                                                                                                               |positive       |positive          |positive       |
++------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:42.391239
++-----------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                              |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Karoline's tardiness will not go unchecked. Elon is already counting the wasted dollars on 10 minutes|negative       |negative          |negative       |
+|Trump giving her little mushroom 🍄 😆                                                               |positive       |negative          |negative       |
+|Yeah, some waiting room music would be nice                                                          |positive       |positive          |positive       |
+|Why was the autopen used?                                                                            |neutral        |neutral           |neutral        |
+|thank you dems for helping get trump elected again! we love you for that.                            |positive       |positive          |positive       |
+|Hope she’s wearin the green ☘️😀                                                                     |positive       |negative          |negative       |
+|I love puppies                                                                                       |positive       |positive          |positive       |
++-----------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:52.279277
++---------------------------------------------------+---------------+------------------+---------------+
+|message                                            |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------+---------------+------------------+---------------+
+|She's getting her groove on. That's why she's late.|neutral        |negative          |negative       |
+|Couch Humpers Anon                                 |neutral        |neutral           |neutral        |
++---------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:55.363891
++-----------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                    |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|I wear my smelt hat in my car 🚗                                                                           |neutral        |neutral           |neutral        |
+|Donald Trump but life is like a box of Chocolates: Donald Gump                                             |positive       |neutral           |positive       |
+|Ask not if she will be wearing green, ask how much green she will be wearing                               |neutral        |negative          |negative       |
+|🇺🇸😭🩸🏛️💰🇮🇱                                                                                          |negative       |neutral           |negative       |
+|auto pen sleepy joe                                                                                        |neutral        |neutral           |neutral        |
+|@pat wilder you should fit right in then.                                                                  |positive       |positive          |positive       |
+|AMERICASTAN'S people must be hungry for food there realy need food money trump is disparate for the tarriff|neutral        |neutral           |neutral        |
+|EVIL aka DEMS who hate everyone                                                                            |negative       |negative          |negative       |
+|THE WORLD HATES TRUMP THE WORLD HATES TRUMP THE WORLD HATES TRUMP                                          |negative       |neutral           |negative       |
+|Like you Victoria                                                                                          |positive       |neutral           |positive       |
+|Project 2025: Enhancing National Security. ABOUT TIME!                                                     |positive       |neutral           |positive       |
+|what a doozy Peter:face-green-smiling:                                                                     |neutral        |neutral           |neutral        |
++-----------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:07:58.602273
++-----------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|We are the party of the people!                                                                                        |positive       |neutral           |positive       |
+|Karoline is definitely the best White House Press Secretary ever bright smart and very transparent Common Sense is back|positive       |positive          |positive       |
+|I don't hear a blessed thing!!! What's going on???                                                                     |negative       |neutral           |negative       |
+|I AM NOW A WOMAN I AM GOING TO A WOMANS JAIL.... *punch* GIVE ME YOUR SNACK CAKE BINCH                                 |neutral        |negative          |negative       |
++-----------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:02.264713
++--------------------------------------------------------+---------------+------------------+---------------+
+|message                                                 |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------+---------------+------------------+---------------+
+|Thank goodness for the block feature                    |positive       |neutral           |positive       |
+|She's making her way through the crowd of Dem protesters|negative       |neutral           |negative       |
+|Little @Nick "Nicky Dicky"                              |neutral        |negative          |negative       |
+|I have shroomers!!!!!                                   |neutral        |neutral           |neutral        |
++--------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:07.514852
++----------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                           |vader_sentiment|textblob_sentiment|final_sentiment|
++----------------------------------------------------------------------------------+---------------+------------------+---------------+
+|🇺🇸🇺🇸🇺🇸🇺🇸🇺🇸                                                              |neutral        |neutral           |neutral        |
+|I'd rather listen to K even if she is late rather than the former mop headed liar.|negative       |negative          |negative       |
+|Would you rather listen to Karoline or KJP?                                       |neutral        |neutral           |neutral        |
+|Where is Trump's puppet?                                                          |neutral        |neutral           |neutral        |
+|yariko                                                                            |neutral        |neutral           |neutral        |
++----------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:12.940376
++------------------------------------------+---------------+------------------+---------------+
+|message                                   |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------+---------------+------------------+---------------+
+|Hell coming                               |negative       |neutral           |negative       |
+|The world stands against Trump and Putin !|neutral        |neutral           |neutral        |
+|DOGE DIVIDEND WHEN                        |neutral        |neutral           |neutral        |
+|Pat found him one                         |neutral        |neutral           |neutral        |
+|Alex Stein 2028 lol                       |positive       |positive          |positive       |
++------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:15.969844
++------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                           |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Islam is hateful to all other religions or beliefs ....its a cancer to humanity and needs radiating               |negative       |neutral           |negative       |
+|He is trying to get a war stopped, why would you go around calling someone names? so what                         |negative       |neutral           |negative       |
+|Right wing controlled by billionaires.                                                                            |neutral        |positive          |positive       |
+|My 🐄 beef is with the press too. important stuff got pushed to back, if that, man the people have a right to know|positive       |positive          |positive       |
+|The                                                                                                               |neutral        |neutral           |neutral        |
+|Vance/Leavitt 2028? she's pretty young. I don't see that happening                                                |positive       |positive          |positive       |
++------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:19.255057
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                       |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|elke crimineel moeten in de gevangenis ; go go , wie maakt oorlog , of wie wie er wil boem gevangenis , we hebben maar 1 wereld                                               |neutral        |neutral           |neutral        |
+|saudi arabia wants to whiten their skin more so they are trying to silently conquer western white civilizations females through moderation of big tech platforms and grooming.|neutral        |positive          |positive       |
+|democrats are the profane                                                                                                                                                     |neutral        |neutral           |neutral        |
+|i have pressed alt f4 and now i have display and sound issues!                                                                                                                |neutral        |positive          |positive       |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:22.947233
++----------------------------------------------+---------------+------------------+---------------+
+|message                                       |vader_sentiment|textblob_sentiment|final_sentiment|
++----------------------------------------------+---------------+------------------+---------------+
+|medical bills didnt get taken off credit today|positive       |neutral           |positive       |
++----------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:25.715615
++--------------------------------------------------+---------------+------------------+---------------+
+|message                                           |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------+---------------+------------------+---------------+
+|How’s the Delta Smelt doing today?                |neutral        |neutral           |neutral        |
+|go throw smeltz when I gulf                       |neutral        |neutral           |neutral        |
+|yeah where are the files ? its been almost a month|positive       |neutral           |positive       |
+|When the does the Press Beating start?            |negative       |neutral           |negative       |
+|my volume is fine                                 |positive       |positive          |positive       |
+|do leprechauns live inside giant mushrooms?       |neutral        |positive          |positive       |
++--------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:28.966730
++--------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                     |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|doocy doofy                                                                                                                                 |neutral        |neutral           |neutral        |
+|the girld is late!!!!                                                                                                                       |neutral        |negative          |negative       |
+|I really wish they'd just stick to the facts and drop all the back-patting and self congratulations. And yes, I voted for Trump every time. |positive       |positive          |positive       |
+|TUCKER 2028 !!!                                                                                                                             |neutral        |neutral           |neutral        |
+|we want Karoline! 😍                                                                                                                        |positive       |neutral           |positive       |
+|Project 2025: Supporting the economy as a free market economy. GREAT!!!!                                                                    |positive       |positive          |positive       |
+|Donald got 77 million votes of a potential 262 million voters. so he did manage to get juuuuuust over a third of the country to vote for him|neutral        |neutral           |neutral        |
+|TEAM Karoline                                                                                                                               |neutral        |neutral           |neutral        |
+|MERICA!!                                                                                                                                    |neutral        |neutral           |neutral        |
++--------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:33.329010
++-----------------------------------------+---------------+------------------+---------------+
+|message                                  |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------+---------------+------------------+---------------+
+|TRUMP is KICKING ASS and you all know it.|negative       |neutral           |negative       |
+|vote for me I'll make tariffs 1000%      |negative       |negative          |negative       |
++-----------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:36.048270
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                                        |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|@Bill facts 🤌🏽                                                                                                                                                                               |neutral        |neutral           |neutral        |
+|@Jon Compte Vancouver, WA here 🙋🏼‍♀️                                                                                                                                                         |positive       |neutral           |positive       |
+|Why do they make us wait?                                                                                                                                                                      |neutral        |neutral           |neutral        |
+|dems are alt+4 them selves                                                                                                                                                                     |neutral        |neutral           |neutral        |
+|I can't get away with showing up late 😩                                                                                                                                                       |negative       |negative          |negative       |
+|all I can say is they should take some of the money that they're saving and help the elderly and increase social security and help are veterans the elderly couldn't even afford food cuz covid|positive       |positive          |positive       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:39.527264
++-----------------------------------------------+---------------+------------------+---------------+
+|message                                        |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------+---------------+------------------+---------------+
+|TRUMP GAVE THE MIC A BJT RUMP GAVE THE MIC A BJ|neutral        |neutral           |neutral        |
+|liberal dems outnumbered 20 to 1               |neutral        |neutral           |neutral        |
+|Democrats are muted                            |neutral        |neutral           |neutral        |
+|Vance/Rubio 2028                               |neutral        |neutral           |neutral        |
++-----------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:43.788167
++-----------------------+---------------+------------------+---------------+
+|message                |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------+---------------+------------------+---------------+
+|So much for 1300 EST...|neutral        |positive          |positive       |
++-----------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:46.322696
++--------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                           |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Subsidize eggs                                                                                    |neutral        |neutral           |neutral        |
+|😛                                                                                                |neutral        |neutral           |neutral        |
+|deport DC activist, duel citizenship Judge Bozo home to Canada - you pledge allegiance only to USA|neutral        |neutral           |neutral        |
++--------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:49.576851
++-----------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                          |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------+---------------+------------------+---------------+
+|What Time Is It my friends???????                                |positive       |neutral           |positive       |
+|Bots in chat                                                     |neutral        |neutral           |neutral        |
+|🥚🥚🥚🥚🥚                                                       |neutral        |neutral           |neutral        |
+|leprechaun in space, or leprechaun in the hood? which ones better|positive       |positive          |positive       |
++-----------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:54.185637
++--------------------------------------+---------------+------------------+---------------+
+|message                               |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------+---------------+------------------+---------------+
+|⌚                                     |neutral        |neutral           |neutral        |
+|Vance/Tulsi 2028                      |neutral        |neutral           |neutral        |
+|@Al Waleski you aren't a bombshell lol|negative       |positive          |negative       |
++--------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:08:56.907183
++--------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                   |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------+---------------+------------------+---------------+
+|🍿🍿🍿🍿🍿🍿                                                              |neutral        |neutral           |neutral        |
+|I wonder what's going on                                                  |neutral        |neutral           |neutral        |
+|Project 2025 is Tramps Mein Kampft                                        |neutral        |neutral           |neutral        |
+|does she now know the difference between tariff and tax?                  |neutral        |neutral           |neutral        |
+|I wonder does her South Pole match her North Pole ? Asking for a friend 😀|positive       |neutral           |positive       |
++--------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:00.092030
++----------------------------------------+---------------+------------------+---------------+
+|message                                 |vader_sentiment|textblob_sentiment|final_sentiment|
++----------------------------------------+---------------+------------------+---------------+
+|Teslas for sale. Low mileage            |negative       |neutral           |negative       |
+|the houthis are still trying to find out|neutral        |neutral           |neutral        |
+|not rubio dude what??????               |neutral        |neutral           |neutral        |
+|AP will ask a dumbass question today!   |negative       |neutral           |negative       |
+|Saleed                                  |neutral        |neutral           |neutral        |
+|CORTİ                                   |neutral        |neutral           |neutral        |
++----------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:04.713353
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                            |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|I voted Trump all three times now president Trump it's time to help our elderly with their social security time to increase it they've been through enough and so have our veterans|positive       |positive          |positive       |
+|sometimes I throw smeltz into my smelter when I hold my gold                                                                                                                       |neutral        |neutral           |neutral        |
+|has tremendous sound ,everyone says so                                                                                                                                             |neutral        |positive          |positive       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:08.745996
++---------------------------------+---------------+------------------+---------------+
+|message                          |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------+---------------+------------------+---------------+
+|New Democratic party home ---> 🚽|positive       |positive          |positive       |
+|@Gyro Vids more misinfo          |neutral        |neutral           |neutral        |
++---------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:13.125844
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                          |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Dear dems, if you cannot hear the sound navigate to your applications folder, then select all using the mouse or command + A. Then right click and select delete.|positive       |positive          |positive       |
+|🐸FROG CLUB CAN NOT BE STOPPED OR CENSORED, WE ARE DECENTRALIZED, WORD OF MOUTH, SPREADING THE ANTI WOKE CULTURE✊️🐸                                             |negative       |neutral           |negative       |
+|@Test MR bad joke                                                                                                                                                |negative       |negative          |negative       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:16.641501
++-----------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|AMERICA PLEASE GO AWAYYYY FROM THIS EARTH                                                                              |positive       |neutral           |positive       |
+|d34th to Islam and its teachings                                                                                       |neutral        |neutral           |neutral        |
+|what makes a great movie❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓❓                                                                    |positive       |positive          |positive       |
+|Kissing the ..."blarney"                                                                                               |positive       |neutral           |positive       |
+|Project 2025: Dismantling the Administrative State, i.e. CLEAN THE SWAMP!!! YEP!!!                                     |positive       |positive          |positive       |
+|king trump                                                                                                             |neutral        |neutral           |neutral        |
+|they're on BP time                                                                                                     |neutral        |neutral           |neutral        |
+|Karolines man is a very lucky dawg                                                                                     |positive       |positive          |positive       |
+|I have feeling Doocy is gonna be extra spicy today 😀                                                                  |positive       |neutral           |positive       |
+|I was thinking the same thing.Not a lot of democrats here tomaybe they all converted to republicans:face-green-smiling:|neutral        |neutral           |neutral        |
+|get up there ...stand there like a bear doocy lol                                                                      |positive       |positive          |positive       |
++-----------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:21.028114
++-------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                            |vader_sentiment|textblob_sentiment|final_sentiment|
++-------------------------------------------------------------------+---------------+------------------+---------------+
+|☕:goat-turquoise-white-horns:                                      |neutral        |neutral           |neutral        |
+|AP won't be called on today                                        |neutral        |neutral           |neutral        |
+|Oooooo if she’s late that means trump is giving her fresh info lol.|positive       |positive          |positive       |
+|I love tulsi as VP but it's unlikely                               |positive       |neutral           |positive       |
++-------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:26.042843
++--------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                       |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|THE HOUTHI'S ARE CLAIMING THEY HAVE DESTROYED NUMEROUS US WARSHIPS! THEY MUST HAVE USED THEIR TOY TYCO DRONES?|negative       |neutral           |negative       |
+|420 <======>~~~~~                                                                                             |neutral        |neutral           |neutral        |
++--------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:28.858846
++--------------+---------------+------------------+---------------+
+|message       |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------+---------------+------------------+---------------+
+|it is 1:09 est|neutral        |neutral           |neutral        |
++--------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:32.207379
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                                              |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|So read it                                                                                                                                                                                           |neutral        |neutral           |neutral        |
+|Democratic party home ---> 🚽                                                                                                                                                                        |positive       |neutral           |positive       |
+|TRUMP GAVE THE MIC A BJ TRUMP GAVE THE MIC A BJ                                                                                                                                                      |neutral        |neutral           |neutral        |
+|Donald Trump but he gained a little weight: DONALD PLUMP                                                                                                                                             |positive       |negative          |negative       |
+|TRUMP giving us the greatest MOVIE OF ALL TIME.                                                                                                                                                      |positive       |positive          |positive       |
+|ANYTIME ANY OF YOU DEBATE A LIBERAL MAKE THEM STAY ON TOPIC AND ASK THEM OK IF YOU NOT LIKE WHAT TRUMP IS DOING WHAT THEN WOULD YOU DO DIFFERENT ? THEY WILL NEVER GIVE YOU A ANSWER NEVER...........|neutral        |positive          |positive       |
+|🤖🇮🇱🤖🇮🇱🤖bots in chat                                                                                                                                                                           |neutral        |neutral           |neutral        |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:36.157540
++------------------------+---------------+------------------+---------------+
+|message                 |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------+---------------+------------------+---------------+
+|Made in Amerika,,,Verge |neutral        |neutral           |neutral        |
+|Leo in the hood is funny|positive       |positive          |positive       |
++------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:39.150003
++---------------------------------------------------+---------------+------------------+---------------+
+|message                                            |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------+---------------+------------------+---------------+
+|@Mr. Raven 🐦‍⬛ That was your Mother that did that.|neutral        |neutral           |neutral        |
++---------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:42.583181
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                                       |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|AP got Alt + F4'ed lol                                                                                                                                                        |positive       |positive          |positive       |
+|Great Scott                                                                                                                                                                   |positive       |positive          |positive       |
+|@Gyro you are still here. Please dehydrate our local drought with your whining tears.                                                                                         |negative       |neutral           |negative       |
+|I love how people thinking that arguing with 80 to 90 percent of American CITIZENS is somehow relevant. spitting in the wind                                                  |positive       |positive          |positive       |
+|Yuri, I am glad to welcome you all.                                                                                                                                           |positive       |positive          |positive       |
+|I HATE FROGS WITH A PASSION 🐸                                                                                                                                                |negative       |negative          |negative       |
+|@Joe Shmo all of the Democrats here are bots.                                                                                                                                 |neutral        |neutral           |neutral        |
+|💨💨💨                                                                                                                                                                        |neutral        |neutral           |neutral        |
+|israel > palestine                                                                                                                                                            |neutral        |neutral           |neutral        |
+|LOL TRUMP'S HEAD                                                                                                                                                              |positive       |positive          |positive       |
+|I think they should bring back all those criminal aliens and drop them in front of that Judges house. And don’t worry if it’s a gated community they know how to scale a wall.|negative       |negative          |negative       |
+|Weed all day                                                                                                                                                                  |neutral        |neutral           |neutral        |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:46.239218
++-------------------------------+---------------+------------------+---------------+
+|message                        |vader_sentiment|textblob_sentiment|final_sentiment|
++-------------------------------+---------------+------------------+---------------+
+|8=======>                      |neutral        |neutral           |neutral        |
+|a great movie? the ✡️ have 👁 s|positive       |positive          |positive       |
+|Here we go now 🙄              |neutral        |neutral           |neutral        |
++-------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:51.611034
++---------------------------------------------------+---------------+------------------+---------------+
+|message                                            |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------+---------------+------------------+---------------+
+|Take a guess where the golf vacation guy is today .|neutral        |neutral           |neutral        |
+|LEŞTİR LEROOOOY!                                   |neutral        |neutral           |neutral        |
+|🧥                                                 |neutral        |neutral           |neutral        |
++---------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:54.884070
++---------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                      |vader_sentiment|textblob_sentiment|final_sentiment|
++---------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|If Karoline had a intro song, what would it be?                                                                                              |neutral        |neutral           |neutral        |
+|Trump                                                                                                                                        |neutral        |neutral           |neutral        |
+|RATS IN CHAT                                                                                                                                 |neutral        |neutral           |neutral        |
+|REPUBLICAN PARTY TODAY: REAGAN: “Mr. Gorbachev, open this gate! Mr. Gorbachev, tear down this wall!”TRUMP: MAKE RUSSIAN FASCISTS GREAT AGAIN!|positive       |positive          |positive       |
++---------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:09:58.290288
++------------------------------------------------------+---------------+------------------+---------------+
+|message                                               |vader_sentiment|textblob_sentiment|final_sentiment|
++------------------------------------------------------+---------------+------------------+---------------+
+|The next "Emperor's new clothes" starts in a moment...|neutral        |positive          |positive       |
+|LATE!!!!                                              |neutral        |negative          |negative       |
+|much tease                                            |negative       |positive          |negative       |
++------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:10:01.841796
++--------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                         |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Project 2025: Securing individual rights. As in the Constitution/Bill of Rights.|positive       |neutral           |positive       |
++--------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:10:04.824794
++----------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                             |vader_sentiment|textblob_sentiment|final_sentiment|
++----------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|🤖🇮🇱🤖🇮🇱bots in chat🙄                                                                          |neutral        |neutral           |neutral        |
+|Hate to break it to you, Trump did NOT win on merit, he won because the Dem's knew Kama was worse...|negative       |negative          |negative       |
+|Buy American, Hire American (citizens)                                                              |neutral        |neutral           |neutral        |
+|Update: the sound tech was fired by DOGE but will be rehired tomorrow                               |negative       |positive          |negative       |
+|on my way to buy an ounce                                                                           |neutral        |neutral           |neutral        |
+|MAGA 🇺🇸 KAG💪                                                                                     |neutral        |neutral           |neutral        |
++----------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:10:08.574501
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                                                                                             |vader_sentiment|textblob_sentiment|final_sentiment|
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|Babies feed on demand, ya know                                                                                                                                      |negative       |neutral           |negative       |
+|connor mcgregor is the leprechaun at the white house today, migrants are comin overthe rainbow all the way to ireland to steal me pot of gold and snatch my hairline|negative       |neutral           |negative       |
+|I stand with President Trump and his great administration! Who let the DOGE out! Woof woof woof!                                                                    |positive       |positive          |positive       |
+|I would just like to say a simple prayer for the liberals 🙏                                                                                                        |positive       |neutral           |positive       |
+|WHERE IS EPSTEIN LIST?????                                                                                                                                          |neutral        |neutral           |neutral        |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:10:13.087346
++-----------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                          |vader_sentiment|textblob_sentiment|final_sentiment|
++-----------------------------------------------------------------+---------------+------------------+---------------+
+|A great movie don’t just throw a chick in it and make it gay! Lol|positive       |positive          |positive       |
++-----------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:10:16.726961
++-------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|message                                                                                    |vader_sentiment|textblob_sentiment|final_sentiment|
++-------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+|UAE subsidizes college, saudi arabia subsidize social media. same beast different tentacle.|neutral        |positive          |positive       |
++-------------------------------------------------------------------------------------------+---------------+------------------+---------------+
+
+INFO:py4j.clientserver:Received command c on object id p0
+INFO:__main__:2025-03-17 17:10:20.605669
++----------------------------------------------+---------------+------------------+---------------+
+|message                                       |vader_sentiment|textblob_sentiment|final_sentiment|
++----------------------------------------------+---------------+------------------+---------------+
+|i got 5 on it                                 |neutral        |neutral           |neutral        |
+|an ounce of what ok, gold right :^)           |positive       |positive          |positive       |
+|🍀The Hitman 10:09 am Washington State here 🍀|neutral        |neutral           |neutral        |
++----------------------------------------------+---------------+------------------+---------------+
