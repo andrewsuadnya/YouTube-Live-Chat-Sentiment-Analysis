@@ -5,7 +5,8 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 ---
 
 ## 🔧 Tech Stack
-![Image](https://github.com/user-attachments/assets/72cbdd49-ff94-4b62-8c49-65f2d343a95c)
+![Data Pipeline](https://github.com/user-attachments/assets/8eb1e504-a531-4aee-ad96-acc0cb7fc3cd)
+
 
 - **Apache Kafka** – Message broker for real-time data ingestion & real-time data streaming
 - **Apache Spark Structured Streaming** – Stream processing engine
@@ -58,11 +59,8 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 - Additional dashboard analytics via Kibana
 
 ![web](https://github.com/user-attachments/assets/07315439-d078-42d7-8e1c-8bd2223742e0)
-
 ![Image](https://github.com/user-attachments/assets/a44c717f-5ffc-4f4f-a730-068bee485466)
-
 ![Image](https://github.com/user-attachments/assets/e0d0ca6f-3710-4018-9cc4-d2dae758dbb9)
-
 ![kibana](https://github.com/user-attachments/assets/45075e59-c8c8-4d1f-b1db-c4159a8594d8)
 
 ---
