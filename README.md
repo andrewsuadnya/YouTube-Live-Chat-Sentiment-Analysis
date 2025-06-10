@@ -5,7 +5,8 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 ---
 
 ## 🔧 Tech Stack
-![Data Pipeline](https://github.com/user-attachments/assets/8eb1e504-a531-4aee-ad96-acc0cb7fc3cd)
+![Data Pipeline](https://github.com/user-attachments/assets/30430a62-7068-40b6-95dc-d0b90a30ccc8)
+
 
 
 - **Apache Kafka** – Message broker for real-time data ingestion & real-time data streaming
