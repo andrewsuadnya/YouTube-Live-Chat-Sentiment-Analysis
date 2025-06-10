@@ -1,4 +1,4 @@
-# 📱YouTube Live Chat Sentiment Analysis (Real-Time Big Data Pipeline)
+# 📱 YouTube Live Chat Sentiment Analysis (Real-Time Big Data Pipeline)
 
 A real-time system for ingesting, processing, and analyzing YouTube live chat comments using Big Data technologies. Built with **Apache Kafka**, **Apache Spark Structured Streaming**, **Elasticsearch**, and **Kibana**, this system performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on a live dashboard built with **React** and **Socket.IO**.
 
