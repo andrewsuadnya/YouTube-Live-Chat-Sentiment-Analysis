@@ -54,16 +54,16 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 - Real-time ingestion of live chat from YouTube via YouTube Data API v3
 - Stream processing using Apache Kafka and Spark Structured Streaming
 - Lexicon-based sentiment classification using VADER and TextBlob
-- Additional dashboard analytics via Kibana
 - Visualization of sentiment distribution on a React-based dashboard
+- Additional dashboard analytics via Kibana
+
+![web](https://github.com/user-attachments/assets/07315439-d078-42d7-8e1c-8bd2223742e0)
+
+![Image](https://github.com/user-attachments/assets/a44c717f-5ffc-4f4f-a730-068bee485466)
 
 ![Image](https://github.com/user-attachments/assets/e0d0ca6f-3710-4018-9cc4-d2dae758dbb9)
 
-![Sidang Skripsi](https://github.com/user-attachments/assets/cab5eaa4-5d75-43e2-88d5-048dfb16f6ae)
-
-![Sidang Skripsi (1)](https://github.com/user-attachments/assets/ce9fa365-6c4e-4436-98c8-1142a5fe6fe8)
-
-![Image](https://github.com/user-attachments/assets/a44c717f-5ffc-4f4f-a730-068bee485466)
+![kibana](https://github.com/user-attachments/assets/45075e59-c8c8-4d1f-b1db-c4159a8594d8)
 
 ---
 
