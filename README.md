@@ -5,7 +5,7 @@ A real-time system for ingesting, processing, and analyzing YouTube Live Chat co
 ---
 
 ## 🔧 Tech Stack
-![Data Pipeline2](https://github.com/user-attachments/assets/b4a4f255-5480-4c43-b1ab-ee5a9da88f99)
+![Data Pipeline2](https://github.com/user-attachments/assets/384d4341-ddf0-4a7a-bdf2-6448aa926a3d)
 The data pipeline consists of five main stages:
 ① YouTube Live Chat is retrieved using the YouTube Data API v3 by a custom Kafka producer.
 ② The messages are ingested into Apache Kafka, acting as a distributed messaging system.
