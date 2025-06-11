@@ -1,22 +1,57 @@
 # 📱 YouTube Live Chat Sentiment Analysis (Real-Time Big Data Pipeline)
 
-A real-time system for ingesting, processing, and analyzing YouTube live chat comments using Big Data technologies. Built with **Apache Kafka**, **Apache Spark Structured Streaming**, **Elasticsearch**, and **Kibana**, this system performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on a live dashboard built with **React** and **Socket.IO**.
+A real-time system for ingesting, processing, and analyzing YouTube Live Chat comments using modern Big Data technologies. Built using **Apache Kafka**, **Spark Structured Streaming**, **Elasticsearch**, **Kibana**, **React.js**, and **Flask**, this pipeline performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on an interactive dashboard.
 
 ---
 
 ## 🔧 Tech Stack
-![Data Pipeline](https://github.com/user-attachments/assets/30430a62-7068-40b6-95dc-d0b90a30ccc8)
 
+* **[Apache Kafka](https://kafka.apache.org/)** – Message broker for real-time data ingestion
+* **[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)** – Stream processing engine
+* **[Elasticsearch](https://www.elastic.co/elasticsearch/)** – Searchable data store
+* **[Kibana](https://www.elastic.co/kibana/)** – Real-time analytics visualization tool
+* **[Flask](https://flask.palletsprojects.com/)** – Lightweight backend API and WebSocket server
+* **[React.js](https://reactjs.org/)** – Frontend for real-time sentiment dashboard
+* **[Socket.IO](https://socket.io/)** – Real-time messaging between backend and frontend
+* **[VADER](https://github.com/cjhutto/vaderSentiment)** & **[TextBlob](https://textblob.readthedocs.io/)** – Lexicon-based sentiment analysis
+* **[Docker](https://www.docker.com/)** – Containerized deployment with multi-service orchestration
 
+---
 
-- **Apache Kafka** – Message broker for real-time data ingestion & real-time data streaming
-- **Apache Spark Structured Streaming** – Stream processing engine
-- **Elasticsearch** – Searchable data store
-- **Kibana** – Real-time visualization interface
-- **Flask (Python)** – Backend API and WebSocket server
-- **React.js** – Frontend dashboard
-- **VADER & TextBlob** – Lexicon-based sentiment analysis
-- **Docker** – Containerized deployment
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Docker & Docker Compose
+* YouTube Data API v3 key
+
+### Installation
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+```
+
+2. Set up `.env` file with your credentials:
+
+```env
+YOUTUBE_API_KEY=your_api_key
+VIDEO_ID=your_video_id
+KAFKA_TOPIC=your_topic
+```
+
+3. Run the stack:
+
+```bash
+docker-compose up --build
+```
+
+4. Access the system:
+
+* React Dashboard → [http://localhost:3000](http://localhost:3000)
+* Kibana Dashboard → [http://localhost:5601](http://localhost:5601)
 
 ---
 
@@ -51,13 +86,24 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 
 ---
 
+## 📌 Usage
+
+1. Kafka producer collects YouTube Live Chat using the Data API v3.
+2. Chat messages are streamed to Kafka topics in real-time.
+3. Spark Structured Streaming processes messages and performs sentiment analysis.
+4. Results are indexed into Elasticsearch.
+5. React + Socket.IO dashboard visualizes data in real-time.
+6. Kibana dashboard allows for deeper historical analysis.
+
+---
+
 ## 📊 Features
 
-- Real-time ingestion of live chat from YouTube via YouTube Data API v3
-- Stream processing using Apache Kafka and Spark Structured Streaming
-- Lexicon-based sentiment classification using VADER and TextBlob
-- Visualization of sentiment distribution on a React-based dashboard
-- Additional dashboard analytics via Kibana
+* ⏱️ Real-time ingestion of YouTube Live Chat messages
+* 🔄 Stream processing using Kafka & Spark Structured Streaming
+* 💬 Sentiment classification via VADER and TextBlob
+* 📈 Live dashboard using React + Socket.IO
+* 📊 Historical and advanced analytics via Kibana
 
 ![web](https://github.com/user-attachments/assets/07315439-d078-42d7-8e1c-8bd2223742e0)
 ![Image](https://github.com/user-attachments/assets/a44c717f-5ffc-4f4f-a730-068bee485466)
@@ -68,29 +114,34 @@ A real-time system for ingesting, processing, and analyzing YouTube live chat co
 
 ## 🧪 Testing and Performance
 
-- System tested on 3 YouTube live streams with 9k, 20k, and 100k viewers
-- Kafka Producer: up to **783 messages/min**
-- Spark Streaming: up to **14.75 batches/min**
-- End-to-end latency: **~9 seconds**
-- VADER Accuracy: **93%**
-- TextBlob Accuracy: **60%**
+The system has been tested with high-traffic YouTube live streams:
+
+| Metric                      | Result                      |
+| --------------------------- | --------------------------- |
+| Viewer Count (tested)       | 9K, 20K, 100K               |
+| Kafka Producer Throughput   | Up to **783 messages/min**  |
+| Spark Processing Rate       | Up to **14.75 batches/min** |
+| End-to-End Latency          | \~**9 seconds**             |
+| VADER Sentiment Accuracy    | **93%**                     |
+| TextBlob Sentiment Accuracy | **60%**                     |
 
 ---
 
 ## 🔮 Future Improvements
 
-- Integrate deep learning models (e.g., BERT, RoBERTa)
-- Replace polling with web scraping for live chat collection
-- Migrate from Spark to Flink for true continuous stream processing
+* 🧠 Integrate deep learning models (e.g., BERT, RoBERTa)
+* 🔍 Replace API polling with WebSocket or scraping approach
+* ⚙️ Migrate from Spark to Flink for lower-latency streaming
 
 ---
 
-## Notes
-- Requires YouTube Data API v3 credentials to collect live chat data
-- Set environment variables in `.env` file for API keys and Kafka topic settings
+## ⚠️ Important Notes
+
+* Requires valid **YouTube Data API v3** key
+* Configuration via `.env` file (API key, video ID, Kafka topic, etc.)
 
 ---
 
 ## 📝 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
