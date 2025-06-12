@@ -8,63 +8,47 @@ cd YouTube Live Chat Sentiment Analysis
 
 
 🚀 MENJALANKAN SISTEM
----------------------------------------------------------------------
-Jalankan sistem (pertama kali):
+---------------------------------
+Pertama Kali (build + run):
     docker-compose up --build -d
 
-Jalankan sistem (selanjutnya):
+Selanjutnya (hanya run ulang):
     docker-compose up -d
 
-Stop kontainer:
-    docker-compose stop        ← jika hanya ingin ganti LIVE CHAT ID
-    docker-compose down        ← stop semua kontainer dan hapus
 
-
-🧹 MEMBERSIHKAN DOCKER
---------------------------------------------
-Hapus semua Docker volumes:
-    docker volume prune -f -a
-
-Hapus semua Docker builder cache:
-    docker builder prune -f -a
-
-Hapus semua logs:
-    rmdir /s /q "logs\producer" "logs\spark"
-
-
-🧪 DEMO DAN DEBUGGING
-----------------------------
-Lihat log producer:
+🧪 DEMO DAN MONITORING CONTAINER
+---------------------------------
+Lihat Log Kafka (producer):
     docker logs -f producer
 
-Lihat log Spark:
+Lihat Log Spark (consumer):
     docker logs -f spark
 
 Akses Spark UI:
     http://localhost:4040
 
 
-🐘 KAFKA TOPIC (Uji Coba)
+🐘 KAFKA COMMANDS (Uji Coba)
 -------------------------------------------------------------------------------------------------------------------------
-Kirim pesan ke Kafka topic:
+Kirim Pesan ke Kafka Topic:
     docker exec -it kafka kafka-console-producer --broker-list kafka:9092 --topic youtube_live_chat
 
-Contoh pesan:
+Contoh Pesan:
     {"author": "Rod Camp", "message": "i love this news", "published_at": "2025-03-11T23:36:33.148196+08:00"}
 
-Cek isi Kafka topic:
+Cek Isi Kafka Topic:
     docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic youtube_live_chat --from-beginning
 
 
-📦 ELASTICSEARCH
+📦 ELASTICSEARCH COMMANDS
 --------------------------------------------------------------------------
-Cek jumlah data masuk:
+Cek Jumlah Data Masuk:
     curl -X GET "http://localhost:9200/sentiment-analysis/_count?pretty"
 
-Lihat struktur mapping:
+Lihat Struktur Mapping:
     curl -X GET "http://localhost:9200/sentiment-analysis/_mapping?pretty"
 
-Lihat isi dan hasil analisis sentimen:
+Lihat Data dan Hasil Analisis Sentimen:
     curl -X GET "http://localhost:9200/sentiment-analysis/_search?pretty"
 
 
@@ -73,27 +57,48 @@ Lihat isi dan hasil analisis sentimen:
     http://localhost:5601
 
 
-🌐 JALANKAN WEB (REAL-TIME WEB DASHBOARD)
+🌐 JALANKAN TAMPILAN (REAL-TIME WEB DASHBOARD)
 -----------------------------------------
-Jalankan backend Flask:
+Jalankan Backend Flask:
     cd sentiment-backend
     python app.py
 
-Jalankan frontend React:
+Jalankan Frontend React:
     cd sentiment-ui
     npm run dev
 
-Buka di browser:
+Buka di Browser:
     http://localhost:5173
 
 💬 Catatan:
-Chat akan muncul dengan warna sesuai sentimen:
+Chat Akan Muncul Dengan Warna Sesuai Sentimen:
 - Hijau = Positif
 - Merah = Negatif
 - Kuning = Netral
 
 
-🧮 ANALISIS LOG
+🔻 MENGHENTIKAN SISTEM
+-----------------------------------------------------------------
+Hanya Stop Kontainer:
+    docker-compose stop       ← jika hanya ingin ganti VIDEO_ID
+
+Stop & Hapus Semua Kontainer:
+    docker-compose down
+
+
+🧹 MEMBERSIHKAN DOCKER (opsional)
+--------------------------------------------
+Hapus Semua Docker Volumes:
+    docker volume prune -f -a
+
+Hapus Semua Docker Builder Cache:
+    docker builder prune -f -a
+
+Hapus Semua Logs:
+    rmdir /s /q "logs\producer" "logs\spark"    ← wajib ketika menjalankan sistem ulang dari awal atau ganti VIDEO_ID
+
+
+🧮 ANALISIS LOG (Latency & Throughput)
 ---------------------------------------------------
-Hitung selisih timestamp antara producer dan spark:
+Hitung Selisih Timestamp Antara Producer dan Spark:
     python logs/hitung_selisih.py
