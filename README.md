@@ -48,18 +48,6 @@ YOUTUBE_API_KEY=your_api_key
 VIDEO_ID=your_video_id
 KAFKA_TOPIC=your_topic
 ```
-
-3. Run the stack:
-
-```bash
-docker-compose up --build
-```
-
-4. Access the system:
-
-* React Dashboard → [http://localhost:3000](http://localhost:3000)
-* Kibana Dashboard → [http://localhost:5601](http://localhost:5601)
-
 ---
 
 ## 📁 Project Structure
