@@ -1,73 +1,99 @@
-HITUNG SELISIH TIAP PESAN DI PRODUCER.LOG DAN SPARK.LOG:
-python logs/hitung_selisih.py
+=============================================================================================
+----------------------------------------HOW TO RUN-------------------------------------------
+=============================================================================================
 
-cd skripsi (spark)
-cd skripsi (spark)/sentiment-backend
-cd skripsi (spark)/sentiment-ui
-
-
-HAPUS SEMUA VOLUMES:
-docker volume prune -f -a
-
-HAPUS SEMUA BUILDS:
-docker builder prune -f -a
-
-HAPUS SEMUA LOGS DI DIREKTORI:
-rmdir /s /q "logs\producer" "logs\spark"
+📁 DIREKTORI
+---------------------------------------
+cd YouTube Live Chat Sentiment Analysis
 
 
-KAFKA TOPIC!!
-Kirim Pesan ke Kafka Topic:
-docker exec -it kafka kafka-console-producer --broker-list kafka:9092 --topic youtube_live_chat
+🚀 MENJALANKAN SISTEM
+---------------------------------------------------------------------
+Jalankan sistem (pertama kali):
+    docker-compose up --build -d
 
-CONTOH PESAN:
-{"author": "Rod Camp", "message": "i love this news", "published_at": "2025-03-11T23:36:33.148196+08:00"}
+Jalankan sistem (selanjutnya):
+    docker-compose up -d
 
-CEK ISI KAFKA TOPIC:
-docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic youtube_live_chat --from-beginning
+Stop kontainer:
+    docker-compose stop        ← jika hanya ingin ganti LIVE CHAT ID
+    docker-compose down        ← stop semua kontainer dan hapus
 
+
+🧹 MEMBERSIHKAN DOCKER
+--------------------------------------------
+Hapus semua Docker volumes:
+    docker volume prune -f -a
+
+Hapus semua Docker builder cache:
+    docker builder prune -f -a
+
+Hapus semua logs:
+    rmdir /s /q "logs\producer" "logs\spark"
+
+
+🧪 DEMO DAN DEBUGGING
+----------------------------
+Lihat log producer:
+    docker logs -f producer
+
+Lihat log Spark:
+    docker logs -f spark
 
 Akses Spark UI:
-http://localhost:4040
+    http://localhost:4040
 
 
-ELASTICSEARCH!!!
-MENGECEK JUMLAH DATA YANG MASUK KE ELASTICSEARCH:
-curl -X GET "http://localhost:9200/sentiment-analysis/_count?pretty"
+🐘 KAFKA TOPIC (Uji Coba)
+-------------------------------------------------------------------------------------------------------------------------
+Kirim pesan ke Kafka topic:
+    docker exec -it kafka kafka-console-producer --broker-list kafka:9092 --topic youtube_live_chat
 
-MELIHAT STRUKTUR DATA YANG MASUK KE ELASTICSEARCH:
-curl -X GET "http://localhost:9200/sentiment-analysis/_mapping?pretty"
+Contoh pesan:
+    {"author": "Rod Camp", "message": "i love this news", "published_at": "2025-03-11T23:36:33.148196+08:00"}
 
-MELIHAT STRUKTUR DAN HASIL SENTIMEN:                  
-curl -X GET "http://localhost:9200/sentiment-analysis/_search?pretty"
-
-
-HOW TO RUN
-docker-compose up --build -d    (PERTAMA KALI RUN)
-docker-compose up -d            (SETELAHNYA TIAP KALI MO RUN)
-http://localhost:5601           (MENGAKSES KIBANA)
+Cek isi Kafka topic:
+    docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic youtube_live_chat --from-beginning
 
 
-DEMO!!!
-docker logs -f producer
-docker logs -f spark
-docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic youtube_live_chat --from-beginning
+📦 ELASTICSEARCH
+--------------------------------------------------------------------------
+Cek jumlah data masuk:
+    curl -X GET "http://localhost:9200/sentiment-analysis/_count?pretty"
+
+Lihat struktur mapping:
+    curl -X GET "http://localhost:9200/sentiment-analysis/_mapping?pretty"
+
+Lihat isi dan hasil analisis sentimen:
+    curl -X GET "http://localhost:9200/sentiment-analysis/_search?pretty"
 
 
-docker-compose stop             (KALAU CUMAN STOP UNTUK GANTI LIVE CHAT ID)
-docker-compose down             (STOP SEMUA KONTAINER)
+📊 AKSES KIBANA
+-------------------------
+    http://localhost:5601
 
 
+🌐 JALANKAN WEB (REAL-TIME WEB DASHBOARD)
+-----------------------------------------
+Jalankan backend Flask:
+    cd sentiment-backend
+    python app.py
 
-🚀 Jalankan Frontend (tampilan web)
-
-cd sentiment-backend
-python app.py                   (Pastikan backend Flask sudah berjalan)
-
-cd sentiment-ui
-npm run dev                     (Jalankan frontend)
+Jalankan frontend React:
+    cd sentiment-ui
+    npm run dev
 
 Buka di browser:
-➜ http://localhost:5173
+    http://localhost:5173
 
-chat akan muncul dengan warna sesuai sentimen (hijau = positif, merah = negatif, kuning = netral)
+💬 Catatan:
+Chat akan muncul dengan warna sesuai sentimen:
+- Hijau = Positif
+- Merah = Negatif
+- Kuning = Netral
+
+
+🧮 ANALISIS LOG
+---------------------------------------------------
+Hitung selisih timestamp antara producer dan spark:
+    python logs/hitung_selisih.py
