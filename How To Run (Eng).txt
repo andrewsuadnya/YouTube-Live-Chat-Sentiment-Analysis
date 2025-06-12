@@ -1,0 +1,104 @@
+=========================================================================================================================
+-------------------------------------------------------HOW TO RUN--------------------------------------------------------
+=========================================================================================================================
+
+📁 DIRECTORY
+-------------------------------------------------------------------------------------------------------------------------
+cd YouTube Live Chat Sentiment Analysis
+
+
+🚀 RUNNING THE SYSTEM
+-------------------------------------------------------------------------------------------------------------------------
+First time (build + run):
+    docker-compose up --build -d
+
+Subsequent runs (just start):
+    docker-compose up -d
+
+
+🧪 DEMO & CONTAINER MONITORING
+-------------------------------------------------------------------------------------------------------------------------
+View Kafka Logs (producer):
+    docker logs -f producer
+
+View Spark Logs (consumer):
+    docker logs -f spark
+
+Access Spark UI:
+    http://localhost:4040
+
+
+🐘 KAFKA COMMANDS (Testing)
+-------------------------------------------------------------------------------------------------------------------------
+Send message to Kafka Topic:
+    docker exec -it kafka kafka-console-producer --broker-list kafka:9092 --topic youtube_live_chat
+
+Example Message:
+    {"author": "Rod Camp", "message": "i love this news", "published_at": "2025-03-11T23:36:33.148196+08:00"}
+
+Check messages in Kafka Topic:
+    docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic youtube_live_chat --from-beginning
+
+
+📦 ELASTICSEARCH COMMANDS
+-------------------------------------------------------------------------------------------------------------------------
+Check number of ingested documents:
+    curl -X GET "http://localhost:9200/sentiment-analysis/_count?pretty"
+
+View mapping structure:
+    curl -X GET "http://localhost:9200/sentiment-analysis/_mapping?pretty"
+
+View data and sentiment analysis results:
+    curl -X GET "http://localhost:9200/sentiment-analysis/_search?pretty"
+
+
+📊 ACCESS KIBANA
+-------------------------------------------------------------------------------------------------------------------------
+    http://localhost:5601
+
+
+🌐 RUN WEB INTERFACE (REAL-TIME WEB DASHBOARD)
+-------------------------------------------------------------------------------------------------------------------------
+Start Flask Backend:
+    cd sentiment-backend
+    python app.py
+
+Start React Frontend:
+    cd sentiment-ui
+    npm run dev
+
+Open in Browser:
+    http://localhost:5173
+
+💬 Note:
+Chat messages will appear with colors based on sentiment:
+- Green = Positive
+- Red = Negative
+- Yellow = Neutral
+
+
+🔻 STOPPING THE SYSTEM
+-------------------------------------------------------------------------------------------------------------------------
+Just stop containers:
+    docker-compose stop       ← if you just want to change the VIDEO_ID
+
+Stop & remove all containers:
+    docker-compose down
+
+
+🧹 CLEANING UP DOCKER (optional)
+-------------------------------------------------------------------------------------------------------------------------
+Remove all Docker volumes:
+    docker volume prune -f -a
+
+Remove all Docker builder cache:
+    docker builder prune -f -a
+
+Delete all logs:
+    rmdir /s /q "logs\producer" "logs\spark"    ← mandatory when restarting the system or changing VIDEO_ID
+
+
+🧮 LOG ANALYSIS (Latency & Throughput)
+-------------------------------------------------------------------------------------------------------------------------
+Calculate timestamp differences between Producer and Spark:
+    python logs/hitung_selisih.py
