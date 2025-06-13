@@ -122,10 +122,10 @@ KAFKA_TOPIC=your_topic
 * 📈 Live dashboard using React + Socket.IO
 * 📊 Historical and advanced analytics via Kibana
 
-![web](https://github.com/user-attachments/assets/07315439-d078-42d7-8e1c-8bd2223742e0)
-![Image](https://github.com/user-attachments/assets/a44c717f-5ffc-4f4f-a730-068bee485466)
-![Image](https://github.com/user-attachments/assets/e0d0ca6f-3710-4018-9cc4-d2dae758dbb9)
-![kibana](https://github.com/user-attachments/assets/45075e59-c8c8-4d1f-b1db-c4159a8594d8)
+![web](https://github.com/user-attachments/assets/d3216a0b-ca47-41ec-a1fe-d4fc794a9c1d)
+![web2](https://github.com/user-attachments/assets/f4719a60-070e-464e-a117-ef849e745a9e)
+![kibana](https://github.com/user-attachments/assets/ef5f806c-dbdb-4055-bc06-ece18abc0ec3)
+![kibana2](https://github.com/user-attachments/assets/589417bc-3022-41f9-aee2-49058c7ec48f)
 
 ---
 
