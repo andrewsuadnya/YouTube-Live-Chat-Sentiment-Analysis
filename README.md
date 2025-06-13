@@ -7,8 +7,6 @@ A near real-time system for ingesting, processing, and analyzing YouTube Live Ch
 > 1. **YouTube Data API Rate Limits** – The API enforces a **minimum 4-5 second polling interval** and does not support continuous real-time streaming, which limits the granularity of live chat data collection.  
 > 2. **Micro-Batch Processing in Spark Structured Streaming** – Spark processes data in small batches (e.g., every 2–5 seconds), not per individual message, resulting in slight latency between ingestion and analysis.
 
-Despite these limitations, the system achieves **low-latency processing (~9 seconds end-to-end)**, making it effective for dynamic sentiment monitoring during live YouTube broadcasts.
-
 ---
 
 ## 🔧 Tech Stack
