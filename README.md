@@ -142,3 +142,7 @@ The system has been tested with high-traffic YouTube live streams:
 ## 📝 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+![License: Private Use Only](https://img.shields.io/badge/license-private--use--only-lightgrey)
+
+> 📄 **License**: This project is licensed for **private use only**. Please refer to the [LICENSE](./LICENSE) file for more details.
