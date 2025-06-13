@@ -13,14 +13,16 @@ The data pipeline consists of five main stages:
 ④ The enriched data is sent to Elasticsearch for storage and indexing.
 ⑤ Data is then visualized in real-time via Kibana and a custom React.js + Flask dashboard using WebSockets.
 
-* **[Apache Kafka](https://kafka.apache.org/)** – Message broker for real-time data ingestion
-* **[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)** – Stream processing engine
-* **[Elasticsearch](https://www.elastic.co/elasticsearch/)** – Searchable data store
-* **[Kibana](https://www.elastic.co/kibana/)** – Real-time analytics visualization tool
-* **[Flask](https://flask.palletsprojects.com/)** – Lightweight backend API and WebSocket server
-* **[React.js](https://reactjs.org/)** – Frontend for real-time sentiment dashboard
-* **[Socket.IO](https://socket.io/)** – Real-time messaging between backend and frontend
-* **[VADER](https://github.com/cjhutto/vaderSentiment)** & **[TextBlob](https://textblob.readthedocs.io/)** – Lexicon-based sentiment analysis
+* **[YouTube Data API v3](https://developers.google.com/youtube/v3)** – Retrieves live chat messages from YouTube (data source)  
+* **[Apache Kafka](https://kafka.apache.org/)** – Message broker for real-time data ingestion  
+* **[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)** – Stream processing engine for data cleaning, transformation, and sentiment analysis  
+* **[VADER](https://github.com/cjhutto/vaderSentiment)** & **[TextBlob](https://textblob.readthedocs.io/)** – Lexicon-based sentiment analysis  
+* **[Elasticsearch](https://www.elastic.co/elasticsearch/)** – Searchable data store for storing analyzed data  
+* **[Kibana](https://www.elastic.co/kibana/)** – Real-time analytics visualization tool for querying Elasticsearch  
+* **[Flask](https://flask.palletsprojects.com/)** – Lightweight backend API and WebSocket server  
+* **[Socket.IO](https://socket.io/)** – Real-time communication between backend and frontend  
+* **[React.js](https://reactjs.org/)** – Frontend framework for real-time sentiment dashboard  
+* **[Recharts](https://recharts.org/)** – Charting library used in the React dashboard for visualizing sentiment trends  
 * **[Docker](https://www.docker.com/)** – Containerized deployment with multi-service orchestration
 
 ---
