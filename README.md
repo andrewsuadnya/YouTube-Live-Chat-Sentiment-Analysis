@@ -58,29 +58,42 @@ KAFKA_TOPIC=your_topic
 
 ```
 .
-├── spark/                      # Spark job for sentiment analysis
-│   ├── spark_job.py            
-│   ├── requirements.txt        
-│   └── Dockerfile              
+├── docker-compose.yml               # Multi-container orchestration
+├── .env                             # Environment configuration
 │
-├── producer/                   # Kafka producer to collect YouTube live chat
-│   ├── producer.py             
-│   ├── requirements.txt        
-│   └── Dockerfile              
+├── logs/                            # Log analysis scripts or logs
 │
-├── logs/                       # Log analysis scripts
+├── producer/                       # Kafka producer to collect YouTube live chat
+│   ├── Dockerfile
+│   ├── producer.py
+│   └── requirements.txt
 │
-├── sentiment-backend/         # Flask backend for REST API and Socket.IO
-│   └── app.py                  
+├── spark/                           # Spark job for sentiment analysis
+│   ├── Dockerfile                   
+│   ├── spark_job.py                 
+│   ├── requirements.txt            
+│   └── speed_test.txt              # Performance testing log
 │
-├── sentiment-ui/              # React.js frontend for sentiment dashboard
-│   ├── src/                    
-│   ├── public/                 
-│   └── index.html              
+├── sentiment-backend/              # Flask backend (REST API & Socket.IO)
+│   └── app.py
 │
-├── docker-compose.yml         # Multi-container orchestration
-├── README.md                  
-└── How To Run.txt             # Step-by-step execution guide
+├── sentiment-ui/                   # React.js frontend for sentiment dashboard
+│   ├── public/
+│   ├── src/
+│   ├── node_modules/
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   ├── eslint.config.js
+│   ├── .gitignore
+│   └── README.md
+│
+├── img/                             # image assets
+│
+├── README.md                        # Main documentation
+├── How To Run (Eng).txt             # Step-by-step guide (English)
+└── How To Run (Idn).txt             # Step-by-step guide (Bahasa Indonesia)
 ```
 
 ---
