@@ -18,12 +18,15 @@ def calculate_time_differences(timestamps, timestamp_format):
     datetime_objects = sorted(set(datetime.strptime(ts, timestamp_format) for ts in timestamps))
     return [(datetime_objects[i] - datetime_objects[i-1]).total_seconds() for i in range(1, len(datetime_objects))]
 
-# On the far right, change to 'producer' & 'spark' or 'final_log'
-log_folder_producer = 'd:\\Dokumen\\(SKRIPSI)\\..PEMBUATAN SISTEM\\LIVE CHAT SENTIMENT ANALYSIS\\SKRIPSI (SPARK)\\logs\\hitung selisih'
-log_folder_spark = 'd:\\Dokumen\\(SKRIPSI)\\..PEMBUATAN SISTEM\\LIVE CHAT SENTIMENT ANALYSIS\\SKRIPSI (SPARK)\\logs\\hitung selisih'
+# Use 'logs/producer' and 'logs/spark' folders relative to the project directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+log_folder_producer = os.path.join(BASE_DIR, 'producer')
+log_folder_spark = os.path.join(BASE_DIR, 'spark')
+# For final logs, you can use:
+# log_folder_final = os.path.join(BASE_DIR, 'final_log')
 
-# Change to 'producer.log' or 'spark.log'
-file_name = 'spark1.log'
+# Change to 'producer.log' or 'spark.log' as needed
+file_name = 'producer.log'
 
 file_path = os.path.join(log_folder_spark if file_name == 'spark1.log' else log_folder_producer, file_name)
 timestamp_format = "%Y-%m-%d %H:%M:%S.%f" if file_name == 'spark1.log' else "%Y-%m-%d %H:%M:%S"
