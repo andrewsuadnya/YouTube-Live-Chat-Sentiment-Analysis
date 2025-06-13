@@ -140,6 +140,16 @@ The system has been tested with high-traffic YouTube live streams:
 ---
 
 ## 📝 License
-![License: Private Use Only](https://img.shields.io/badge/license-private--use--only-lightgrey)
+![License](https://img.shields.io/badge/license-Private_Use_Only-red.svg)
 
-> 📄 **License**: This project is licensed for **private use only**. Please refer to the [LICENSE](./LICENSE) file for more details.
+This project is licensed for **private, non-commercial use only**.  
+You are permitted to **use**, **modify**, and **run** this software **personally**, but you are **strictly prohibited** from:
+
+* Using this software for commercial purposes  
+* Redistributing or publishing any part of this software  
+* Selling or sublicensing this software to others  
+* Including this software in any commercial product or service  
+
+Any violation of these terms may result in legal consequences.
+
+© 2025 Andrew Suadnya. All rights reserved.
