@@ -1,0 +1,21 @@
+producer 1 & spark1: IShowSpeed (irl stream in Hong Kong 🇭🇰) 100,000 viewers
+producer 2 & spark2: LiveNow From Fox (LIVE SOON: White House press briefing) 20,000 viewers
+producer 3 & spark3: LiveNow From Fox (Update On Man Executed in Arizona) 9,000 viewers
+
+1. IShowSpeed (irl stream in Hong Kong 🇭🇰) 100,000 viewers
+producer (28249 messages)                        : 4.23 seconds
+spark (403 batches)                               : 4.20 seconds
+total message retrieval time (producer)           : 2163.00 seconds
+total batch processing time (spark)               : 1687.75 seconds
+
+2. LiveNow From Fox (LIVE SOON: White House press briefing) 20,000 viewers
+producer (6722 messages)                         : 5.80 seconds
+spark (1952 batches)                             : 4.73 seconds
+total message retrieval time (producer)           : 9225.00 seconds
+total batch processing time (spark)               : 9218.80 seconds
+
+3. LiveNow From Fox (Update On Man Executed in Arizona) 9,000 viewers
+producer (7497 messages)                         : 5.45 seconds
+spark (1640 batches)                             : 4.07 seconds
+total message retrieval time (producer)           : 6676.00 seconds
+total batch processing time (spark)               : 6663.36 seconds
