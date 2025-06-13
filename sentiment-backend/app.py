@@ -11,15 +11,15 @@ app = Flask(__name__)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Load konfigurasi dari environment variables
+# Load configuration from environment variables
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 VIDEO_ID = os.getenv("VIDEO_ID")
 
-# Cek koneksi Elasticsearch
+# Check Elasticsearch connection
 try:
     es = Elasticsearch("http://localhost:9200")
     if not es.ping():
-        raise ValueError("Elasticsearch tidak dapat dihubungi.")
+        raise ValueError("Elasticsearch cannot be reached.")
 except Exception as e:
     print(f"Error: {e}")
     es = None
@@ -31,7 +31,7 @@ def home():
 @app.route("/chat", methods=["GET"])
 def get_chat():
     if es is None:
-        return jsonify({"error": "Elasticsearch tidak tersedia"}), 500
+        return jsonify({"error": "Elasticsearch is not available"}), 500
 
     try:
         response = es.search(index="sentiment-analysis", body={
@@ -56,7 +56,7 @@ def get_chat():
 @app.route("/viewers", methods=["GET"])
 def get_viewers():
     if not YOUTUBE_API_KEY or not VIDEO_ID:
-        return jsonify({"error": "YOUTUBE_API_KEY atau VIDEO_ID tidak tersedia"}), 500
+        return jsonify({"error": "YOUTUBE_API_KEY or VIDEO_ID is not available"}), 500
 
     url = f"https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id={VIDEO_ID}&key={YOUTUBE_API_KEY}"
     try:
@@ -70,28 +70,28 @@ def get_viewers():
 @app.route("/video-info", methods=["GET"])
 def get_video_info():
     if not YOUTUBE_API_KEY or not VIDEO_ID:
-        return jsonify({"error": "YOUTUBE_API_KEY atau VIDEO_ID tidak tersedia"}), 500
+        return jsonify({"error": "YOUTUBE_API_KEY or VIDEO_ID is not available"}), 500
 
     video_url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet&id={VIDEO_ID}&key={YOUTUBE_API_KEY}"
     try:
         video_response = requests.get(video_url).json()
         snippet = video_response.get("items", [{}])[0].get("snippet", {})
 
-        title = snippet.get("title", "Judul tidak ditemukan")
+        title = snippet.get("title", "Title not found")
         channel_id = snippet.get("channelId", None)
 
         if not channel_id:
-            return jsonify({"error": "Channel ID tidak ditemukan"}), 500
+            return jsonify({"error": "Channel ID not found"}), 500
 
     except Exception as e:
-        return jsonify({"error": f"Gagal mengambil data video: {str(e)}"}), 500
+        return jsonify({"error": f"Failed to fetch video data: {str(e)}"}), 500
 
     channel_url = f"https://www.googleapis.com/youtube/v3/channels?part=snippet&id={channel_id}&key={YOUTUBE_API_KEY}"
     try:
         channel_response = requests.get(channel_url).json()
         thumbnails = channel_response.get("items", [{}])[0].get("snippet", {}).get("thumbnails", {})
 
-        # Ambil gambar dengan kualitas terbaik yang tersedia
+        # Get the best quality image available
         logo_url = (
             thumbnails.get("maxres", {}).get("url") or
             thumbnails.get("high", {}).get("url") or
@@ -102,7 +102,7 @@ def get_video_info():
         return jsonify({"title": title, "logo_url": logo_url})
 
     except Exception as e:
-        return jsonify({"error": f"Gagal mengambil logo channel: {str(e)}"}), 500
+        return jsonify({"error": f"Failed to fetch channel logo: {str(e)}"}), 500
 
 def watch_elasticsearch():
     last_timestamp = None

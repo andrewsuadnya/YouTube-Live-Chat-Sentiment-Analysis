@@ -121,7 +121,7 @@ if __name__ == "__main__":
         producer = KafkaProducer(
             bootstrap_servers=KAFKA_BROKER,
             value_serializer=lambda v: json.dumps(v).encode('utf-8'),
-            acks='all'  # Menunggu konfirmasi dari Kafka sebelum menganggap pesan terkirim
+            acks='all'  # Wait for confirmation from Kafka before considering the message sent
         )
         logging.info("Kafka producer connected successfully.")
 

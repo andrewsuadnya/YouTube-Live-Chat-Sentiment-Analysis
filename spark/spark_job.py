@@ -12,7 +12,7 @@ import pandas as pd
 from datetime import datetime
 import pytz
 
-# Konfigurasi logging
+# Logging configuration
 log_handler = RotatingFileHandler("logs/spark.log", maxBytes=5*1024*1024, backupCount=5)
 logging.basicConfig(level=logging.INFO, handlers=[log_handler, logging.StreamHandler()])
 logger = logging.getLogger(__name__)
@@ -23,7 +23,7 @@ KAFKA_BROKER = os.getenv("KAFKA_BROKER", "kafka:9092")
 KAFKA_TOPIC = os.getenv("KAFKA_TOPIC", "youtube_live_chat")
 ELASTICSEARCH_HOST = os.getenv("ELASTICSEARCH_HOST", "http://elasticsearch:9200")
 
-# Inisialisasi SparkSession
+# Initialize SparkSession
 spark = SparkSession.builder \
     .appName("YouTubeLiveChatSentimentAnalysis") \
     .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-hadoop:8.11.0") \
@@ -36,14 +36,14 @@ spark = SparkSession.builder \
 
 spark.sparkContext.setLogLevel("ERROR")
 
-# Skema data dari Kafka
+# Data schema from Kafka
 schema = StructType([
     StructField("author", StringType(), True),
     StructField("message", StringType(), True),
     StructField("published_at", StringType(), True)
 ])
 
-# Caching Sentiment Analyzer
+# Cache Sentiment Analyzer
 vader_analyzer = SentimentIntensityAnalyzer()
 
 @pandas_udf(StringType())
@@ -62,7 +62,7 @@ def analyze_sentiment_textblob(messages: pd.Series) -> pd.Series:
         "neutral"
     ))
 
-# Baca data dari Kafka dengan pembatasan rate
+# Read data from Kafka with rate limiting
 raw_stream = spark.readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", KAFKA_BROKER) \
@@ -70,47 +70,47 @@ raw_stream = spark.readStream \
     .option("startingOffsets", "latest") \
     .load()
 
-# Parsing JSON dari Kafka
+# Parse JSON from Kafka
 parsed_stream = raw_stream.selectExpr("CAST(value AS STRING) as json_string") \
     .select(from_json(col("json_string"), schema).alias("data")) \
     .select("data.*") \
-    .dropDuplicates(["message"])  # Hapus duplikat lebih awal
+    .dropDuplicates(["message"])  # Remove duplicates early
 
-# Membersihkan teks untuk VADER (hapus URL, mention, angka, karakter non-alfabet, mempertahankan emotikon)
+# Clean text for VADER (remove URLs, mentions, numbers, non-alphabetic characters, keep emoticons)
 processed_stream = parsed_stream.withColumn(
     "cleaned_message_vader",
     lower(regexp_replace(col("message"), r"https?://\S+|www\.\S+|@\w+|[^a-zA-Z\u1F300-\u1F6FF\u1F900-\u1F9FF\uD83C-\uDBFF\uDC00-\uDFFF\s]|[0-9!@#$%^&*()_+={}\[\]:;\"'<>,.?/~`\\|-]", ""))
 )
 
-# Membersihkan teks untuk TextBlob (hapus URL, mention, angka, karakter non-alfabet, emotikon)
+# Clean text for TextBlob (remove URLs, mentions, numbers, non-alphabetic characters, emoticons)
 processed_stream = processed_stream.withColumn(
     "cleaned_message_textblob",
     lower(regexp_replace(col("message"), r"https?://\S+|www\.\S+|@\w+|[^\w\s]|\d+", ""))
 )
 
-# Analisis Sentimen dengan VADER (langsung dari cleaned_message_vader)
+# Sentiment analysis with VADER (directly from cleaned_message_vader)
 processed_stream = processed_stream.withColumn("vader_sentiment", analyze_sentiment_vader(col("cleaned_message_vader")))
 
-# Tokenisasi teks untuk TextBlob
+# Tokenize text for TextBlob
 processed_stream = processed_stream.withColumn("tokenized_message", split(col("cleaned_message_textblob"), r"\s+"))
 
-# Menghapus stopwords untuk TextBlob
+# Remove stopwords for TextBlob
 stopwords_remover = StopWordsRemover(inputCol="tokenized_message", outputCol="filtered_message")
 processed_stream = stopwords_remover.transform(processed_stream)
 
-# Gabungkan kembali hasil filtering untuk TextBlob
+# Join back the filtered results for TextBlob
 processed_stream = processed_stream.withColumn("final_message_textblob", array_join(col("filtered_message"), " "))
 
-# Analisis Sentimen dengan TextBlob
+# Sentiment analysis with TextBlob
 processed_stream = processed_stream.withColumn("textblob_sentiment", analyze_sentiment_textblob(col("final_message_textblob")))
 
-# Mencocokkan hasil sentimen
+# Match sentiment results
 processed_stream = processed_stream.withColumn(
     "sentiment_match",
     when(col("vader_sentiment") == col("textblob_sentiment"), "True").otherwise("False")
 )
 
-# Final sentiment berdasarkan Aturan Prioritas
+# Final sentiment based on Priority Rules
 processed_stream = processed_stream.withColumn(
     "final_sentiment",
     when((col("vader_sentiment") == "negative") | (col("textblob_sentiment") == "negative"), "negative")
@@ -118,7 +118,7 @@ processed_stream = processed_stream.withColumn(
     .otherwise("neutral")
 )
 
-# Simpan hasil ke Elasticsearch dalam Mode Batch
+# Save results to Elasticsearch in Batch Mode
 def write_to_elasticsearch(batch_df, batch_id):
     batch_df.write \
         .format("org.elasticsearch.spark.sql") \
@@ -127,11 +127,11 @@ def write_to_elasticsearch(batch_df, batch_id):
         .mode("append") \
         .save()
 
-    # Pilih hanya kolom yang ingin dicetak di log
+    # Select only columns to be printed in the log
     selected_df = batch_df.select("message", "vader_sentiment", "textblob_sentiment", "sentiment_match", "final_sentiment")
     table_log = selected_df._jdf.showString(20, 0, False)
 
-    # Konversi timestamp ke Asia/Makassar sebelum logging
+    # Convert timestamp to Asia/Makassar before logging
     local_tz = pytz.timezone("Asia/Makassar")
     utc_time = datetime.utcnow().replace(tzinfo=pytz.utc)
     local_time = utc_time.astimezone(local_tz)

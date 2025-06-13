@@ -18,11 +18,11 @@ def calculate_time_differences(timestamps, timestamp_format):
     datetime_objects = sorted(set(datetime.strptime(ts, timestamp_format) for ts in timestamps))
     return [(datetime_objects[i] - datetime_objects[i-1]).total_seconds() for i in range(1, len(datetime_objects))]
 
-# Paling ujung kanan, ganti dengan 'producer' & 'spark' atau 'final_log'
+# On the far right, change to 'producer' & 'spark' or 'final_log'
 log_folder_producer = 'd:\\Dokumen\\(SKRIPSI)\\..PEMBUATAN SISTEM\\LIVE CHAT SENTIMENT ANALYSIS\\SKRIPSI (SPARK)\\logs\\hitung selisih'
 log_folder_spark = 'd:\\Dokumen\\(SKRIPSI)\\..PEMBUATAN SISTEM\\LIVE CHAT SENTIMENT ANALYSIS\\SKRIPSI (SPARK)\\logs\\hitung selisih'
 
-# Ganti dengan 'producer.log' atau 'spark.log'
+# Change to 'producer.log' or 'spark.log'
 file_name = 'spark1.log'
 
 file_path = os.path.join(log_folder_spark if file_name == 'spark1.log' else log_folder_producer, file_name)
@@ -32,10 +32,10 @@ timestamps = read_log_file(file_path, timestamp_format)
 time_differences = calculate_time_differences(timestamps, timestamp_format)
 
 for i, diff in enumerate(time_differences):
-    print(f"Selisih waktu antara kelompok pesan {i+1} dan kelompok pesan {i+2}: {diff} detik")
+    print(f"Time difference between message group {i+1} and message group {i+2}: {diff} seconds")
 
 if time_differences:
     average_difference = sum(time_differences) / len(time_differences)
-    print(f"Rata-rata selisih waktu: {average_difference:.2f} detik")
+    print(f"Average time difference: {average_difference:.2f} seconds")
 else:
-    print("Tidak ada selisih waktu yang dapat dihitung.")
+    print("No time differences could be calculated.")
