@@ -1,28 +1,29 @@
-# 📱 YouTube Live Chat Sentiment Analysis (Real-Time Data Pipeline)
+# 📱 YouTube Live Chat Sentiment Analysis (Near Real-Time Data Pipeline)
 
-A real-time system for ingesting, processing, and analyzing YouTube Live Chat comments using modern Big Data technologies. Built using **Apache Kafka**, **Spark Structured Streaming**, **Elasticsearch**, **Kibana**, **React.js**, and **Flask**, this pipeline performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on an interactive dashboard.
+A near real-time system for ingesting, processing, and analyzing YouTube Live Chat comments using modern Big Data technologies. Built using **Apache Kafka**, **Spark Structured Streaming**, **Elasticsearch**, **Kibana**, **React.js**, and **Flask**, this pipeline performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on an interactive dashboard.
 
 ---
 
 ## 🔧 Tech Stack
+
 ![Data Pipeline2](https://github.com/user-attachments/assets/384d4341-ddf0-4a7a-bdf2-6448aa926a3d)
 The data pipeline consists of five main stages:
 ① YouTube Live Chat is retrieved using the YouTube Data API v3 by a custom Kafka producer.
 ② The messages are ingested into Apache Kafka, acting as a distributed messaging system.
 ③ Apache Spark Structured Streaming consumes data from Kafka, performs cleaning, transformation, and sentiment analysis (VADER & TextBlob).
 ④ The enriched data is sent to Elasticsearch for storage and indexing.
-⑤ Data is then visualized in real-time via Kibana and a custom React.js + Flask dashboard using WebSockets.
+⑤ Data is then visualized in near real-time via Kibana and a custom React.js + Flask dashboard using WebSockets.
 
-* **[YouTube Data API v3](https://developers.google.com/youtube/v3)** – Retrieves live chat messages from YouTube (data source)  
-* **[Apache Kafka](https://kafka.apache.org/)** – Message broker for real-time data ingestion  
-* **[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)** – Stream processing engine for data cleaning, transformation, and sentiment analysis  
-* **[VADER](https://github.com/cjhutto/vaderSentiment)** & **[TextBlob](https://textblob.readthedocs.io/)** – Lexicon-based sentiment analysis  
-* **[Elasticsearch](https://www.elastic.co/elasticsearch/)** – Searchable data store for storing analyzed data  
-* **[Kibana](https://www.elastic.co/kibana/)** – Real-time analytics visualization tool for querying Elasticsearch  
-* **[Flask](https://flask.palletsprojects.com/)** – Lightweight backend API and WebSocket server  
-* **[Socket.IO](https://socket.io/)** – Real-time communication between backend and frontend  
-* **[React.js](https://reactjs.org/)** – Frontend framework for real-time sentiment dashboard  
-* **[Recharts](https://recharts.org/)** – Charting library used in the React dashboard for visualizing sentiment trends  
+* **[YouTube Data API v3](https://developers.google.com/youtube/v3)** – Retrieves live chat messages from YouTube (data source)
+* **[Apache Kafka](https://kafka.apache.org/)** – Message broker for real-time data ingestion
+* **[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)** – Stream processing engine for data cleaning, transformation, and sentiment analysis
+* **[VADER](https://github.com/cjhutto/vaderSentiment)** & **[TextBlob](https://textblob.readthedocs.io/)** – Lexicon-based sentiment analysis
+* **[Elasticsearch](https://www.elastic.co/elasticsearch/)** – Searchable data store for storing analyzed data
+* **[Kibana](https://www.elastic.co/kibana/)** – Real-time analytics visualization tool for querying Elasticsearch
+* **[Flask](https://flask.palletsprojects.com/)** – Lightweight backend API and WebSocket server
+* **[Socket.IO](https://socket.io/)** – Real-time communication between backend and frontend
+* **[React.js](https://reactjs.org/)** – Frontend framework for real-time sentiment dashboard
+* **[Recharts](https://recharts.org/)** – Charting library used in the React dashboard for visualizing sentiment trends
 * **[Docker](https://www.docker.com/)** – Containerized deployment with multi-service orchestration
 
 ---
@@ -50,6 +51,7 @@ YOUTUBE_API_KEY=your_api_key
 VIDEO_ID=your_video_id
 KAFKA_TOPIC=your_topic
 ```
+
 ---
 
 ## 📁 Project Structure
@@ -89,14 +91,14 @@ KAFKA_TOPIC=your_topic
 2. Chat messages are streamed to Kafka topics in real-time.
 3. Spark Structured Streaming processes messages and performs sentiment analysis.
 4. Results are indexed into Elasticsearch.
-5. React + Socket.IO dashboard visualizes data in real-time.
+5. React + Socket.IO dashboard visualizes data in near real-time.
 6. Kibana dashboard allows for deeper historical analysis.
 
 ---
 
 ## 📊 Features
 
-* ⏱️ Real-time ingestion of YouTube Live Chat messages
+* ⏱️ Near real-time ingestion of YouTube Live Chat messages
 * 🔄 Stream processing using Kafka & Spark Structured Streaming
 * 💬 Sentiment classification via VADER and TextBlob
 * 📈 Live dashboard using React + Socket.IO
@@ -140,6 +142,7 @@ The system has been tested with high-traffic YouTube live streams:
 ---
 
 ## 📝 License
+
 ![License](https://img.shields.io/badge/license-Private_Use_Only-red.svg)
 
 This project is licensed under a **Custom Private License**:
