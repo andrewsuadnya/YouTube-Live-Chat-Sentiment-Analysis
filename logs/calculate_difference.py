@@ -5,9 +5,9 @@ def read_log_file(file_path, timestamp_format):
     timestamps = []
     with open(file_path, 'r', encoding='utf-8') as file:
         for line in file:
-            if "spark1.log" in file_path and "INFO:__main__:" in line:
+            if "spark.log" in file_path and "INFO:__main__:" in line:
                 timestamp_str = " ".join(line.split("INFO:__main__:")[1].strip().split()[:2])
-            elif "producer3.log" in file_path:
+            elif "producer.log" in file_path:
                 timestamp_str = " ".join(line.strip().split()[:2])
             else:
                 continue
@@ -22,14 +22,12 @@ def calculate_time_differences(timestamps, timestamp_format):
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 log_folder_producer = os.path.join(BASE_DIR, 'producer')
 log_folder_spark = os.path.join(BASE_DIR, 'spark')
-# For final logs, you can use:
-# log_folder_final = os.path.join(BASE_DIR, 'final_log')
 
 # Change to 'producer.log' or 'spark.log' as needed
 file_name = 'producer.log'
 
-file_path = os.path.join(log_folder_spark if file_name == 'spark1.log' else log_folder_producer, file_name)
-timestamp_format = "%Y-%m-%d %H:%M:%S.%f" if file_name == 'spark1.log' else "%Y-%m-%d %H:%M:%S"
+file_path = os.path.join(log_folder_spark if file_name == 'spark.log' else log_folder_producer, file_name)
+timestamp_format = "%Y-%m-%d %H:%M:%S.%f" if file_name == 'spark.log' else "%Y-%m-%d %H:%M:%S"
 
 timestamps = read_log_file(file_path, timestamp_format)
 time_differences = calculate_time_differences(timestamps, timestamp_format)
