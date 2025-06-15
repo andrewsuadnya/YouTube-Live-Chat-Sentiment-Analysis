@@ -31,7 +31,9 @@ spark = SparkSession.builder \
     .config("spark.driver.memory", "4g") \
     .config("spark.sql.shuffle.partitions", "5") \
     .config("spark.streaming.backpressure.enabled", "true") \
-    .config("spark.streaming.kafka.maxRatePerPartition", "200") \
+    .config("spark.streaming.kafka.maxRatePerPartition", "500") \
+    .config("spark.sql.streaming.checkpointInterval", "1000ms") \
+    .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer") \
     .getOrCreate()
 
 spark.sparkContext.setLogLevel("ERROR")
