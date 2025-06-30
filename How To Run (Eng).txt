@@ -2,9 +2,15 @@
 -------------------------------------------------------HOW TO RUN--------------------------------------------------------
 =========================================================================================================================
 
+📋 IMPORTANT NOTE
+-------------------------------------------------------------------------------------------------------------------------
+Commands marked with "Windows:" are for Windows Command Prompt/PowerShell
+Commands marked with "Linux:" are for Linux/macOS/WSL
+Commands without OS prefix work on both systems
+
 📁 DIRECTORY
 -------------------------------------------------------------------------------------------------------------------------
-cd YouTube Live Chat Sentiment Analysis
+cd 'YouTube Live Chat Sentiment Analysis'
 
 
 🚀 RUNNING THE SYSTEM
@@ -95,10 +101,12 @@ Remove all Docker builder cache:
     docker builder prune -f -a
 
 Delete all logs:
-    rmdir /s /q "logs\producer" "logs\spark"    ← mandatory when restarting the system or changing VIDEO_ID
+    Windows: rmdir /s /q "logs\producer" "logs\spark"    ← mandatory when restarting the system or changing VIDEO_ID
+    Linux:   rm -rf logs/producer logs/spark    ← mandatory when restarting the system or changing VIDEO_ID
 
 
 🧮 LOG ANALYSIS (Latency & Throughput)
 -------------------------------------------------------------------------------------------------------------------------
 Calculate timestamp differences between Producer and Spark:
-    python logs/hitung_selisih.py
+    Windows: python logs\hitung_selisih.py
+    Linux:   python logs/hitung_selisih.py
