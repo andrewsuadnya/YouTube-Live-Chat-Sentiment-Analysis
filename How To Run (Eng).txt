@@ -102,7 +102,7 @@ Remove all Docker builder cache:
 
 Delete all logs:
     Windows: rmdir /s /q "logs\producer" "logs\spark"    ← mandatory when restarting the system or changing VIDEO_ID
-    Linux:   rm -rf logs/producer logs/spark    ← mandatory when restarting the system or changing VIDEO_ID
+    Linux:   sudo rm -rf logs/producer logs/spark    ← mandatory when restarting the system or changing VIDEO_ID
 
 
 🧮 LOG ANALYSIS (Latency & Throughput)
