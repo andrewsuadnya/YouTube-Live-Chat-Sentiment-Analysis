@@ -67,7 +67,7 @@ Lihat Data dan Hasil Analisis Sentimen:
 -------------------------------------------------------------------------------------------------------------------------
 Jalankan Backend Flask:
     cd sentiment-backend
-    python app.py
+    python3 app.py
 
 Jalankan Frontend React:
     cd sentiment-ui

@@ -67,7 +67,7 @@ View data and sentiment analysis results:
 -------------------------------------------------------------------------------------------------------------------------
 Start Flask Backend:
     cd sentiment-backend
-    python app.py
+    python3 app.py
 
 Start React Frontend:
     cd sentiment-ui
