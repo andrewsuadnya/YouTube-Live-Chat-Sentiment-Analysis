@@ -23,17 +23,21 @@ KAFKA_BROKER = os.getenv("KAFKA_BROKER", "kafka:9092")
 KAFKA_TOPIC = os.getenv("KAFKA_TOPIC", "youtube_live_chat")
 ELASTICSEARCH_HOST = os.getenv("ELASTICSEARCH_HOST", "http://elasticsearch:9200")
 
-# Initialize SparkSession
+# Initialize SparkSession with compatible versions
 spark = SparkSession.builder \
     .appName("YouTubeLiveChatSentimentAnalysis") \
-    .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-hadoop:8.11.0") \
-    .config("spark.executor.memory", "6g") \
-    .config("spark.driver.memory", "4g") \
+    .config("spark.jars.packages", 
+            "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,"
+            "org.elasticsearch:elasticsearch-spark-30_2.12:8.8.0") \
+    .config("spark.executor.memory", "4g") \
+    .config("spark.driver.memory", "2g") \
     .config("spark.sql.shuffle.partitions", "5") \
     .config("spark.streaming.backpressure.enabled", "true") \
     .config("spark.streaming.kafka.maxRatePerPartition", "500") \
     .config("spark.sql.streaming.checkpointInterval", "1000ms") \
     .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer") \
+    .config("spark.sql.adaptive.enabled", "false") \
+    .config("spark.sql.adaptive.coalescePartitions.enabled", "false") \
     .getOrCreate()
 
 spark.sparkContext.setLogLevel("ERROR")

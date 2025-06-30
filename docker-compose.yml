@@ -16,7 +16,7 @@ services:
       retries: 5
 
   kafka:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:7.4.0
     container_name: kafka
     depends_on:
       - zookeeper
@@ -26,16 +26,18 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
     ports:
       - "9092:9092"
     networks:
       - kafka-network
     restart: always
     healthcheck:
-      test: ["CMD", "nc", "-z", "localhost", "9092"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "kafka-broker-api-versions", "--bootstrap-server", "localhost:9092"]
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 30s
 
   producer:
     build: ./producer
@@ -74,10 +76,11 @@ services:
     ports:
       - "4040:4040"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "curl", "-f", "http://localhost:4040"]
+      interval: 30s
+      timeout: 10s
       retries: 5
+      start_period: 60s
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.3
