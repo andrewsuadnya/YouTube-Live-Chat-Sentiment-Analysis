@@ -5,7 +5,7 @@ A near real-time system for ingesting, processing, and analyzing YouTube Live Ch
 > ⚠️ **Why Near Real-Time?**
 > The system operates in **near real-time** due to two key constraints:
 > 1. **YouTube Data API Rate Limit** – The API enforces a **minimum 4–5 second polling interval** and does not support continuous streaming, which limits the granularity of live chat data ingestion.
-> 2. **Micro-Batch Processing with Spark Structured Streaming** – Spark processes data in small intervals (e.g., every 2–5 seconds), introducing slight latency between data ingestion and analysis.
+> 2. **Micro-Batch Processing with Spark Structured Streaming** –  Spark processes data in small batches (e.g., every 2–5 seconds), not per individual message, resulting in slight latency between ingestion and analysis.
 
 ---
 
