@@ -1,35 +1,36 @@
-# 📱 YouTube Live Chat Sentiment Analysis (Near Real-Time Streaming Data Pipeline)
+# 📱 YouTube Live Chat Sentiment Analysis (Near Real-Time Data Streaming Pipeline)
 
-A near real-time system for ingesting, processing, and analyzing YouTube Live Chat comments using modern Big Data technologies. Built using **Apache Kafka**, **Spark Structured Streaming**, **Elasticsearch**, **Kibana**, **React.js**, and **Flask**, this pipeline performs sentiment analysis using **VADER** and **TextBlob**, and visualizes results on an interactive dashboard.
+A near real-time system for ingesting, processing, and analyzing YouTube Live Chat messages using modern Big Data technologies. Built with **Apache Kafka**, **Spark Structured Streaming**, **Elasticsearch**, **Kibana**, **React.js**, and **Flask**, the pipeline performs sentiment analysis using **VADER** and **TextBlob**, and displays the results through an interactive real-time dashboard.
 
-> ⚠️ **Why Near Real-Time?**  
-> The system is categorized as **near real-time** due to two key constraints:  
-> 1. **YouTube Data API Rate Limits** – The API enforces a **minimum 4-5 second polling interval** and does not support continuous real-time streaming, which limits the granularity of live chat data collection.  
-> 2. **Micro-Batch Processing in Spark Structured Streaming** – Spark processes data in small batches (e.g., every 2–5 seconds), not per individual message, resulting in slight latency between ingestion and analysis.
+> ⚠️ **Why Near Real-Time?**
+> The system operates in **near real-time** due to two key constraints:
+> 1. **YouTube Data API Rate Limit** – The API enforces a **minimum 4–5 second polling interval** and does not support continuous streaming, which limits the granularity of live chat data ingestion.
+> 2. **Micro-Batch Processing with Spark Structured Streaming** –  Spark processes data in small batches (e.g., every 2–5 seconds), not per individual message, resulting in slight latency between ingestion and analysis.
 
 ---
 
 ## 🔧 Tech Stack
 
 ![Data Pipeline2](https://github.com/user-attachments/assets/384d4341-ddf0-4a7a-bdf2-6448aa926a3d)
-The data pipeline consists of five main stages:
-① YouTube Live Chat is retrieved using the YouTube Data API v3 by a custom Kafka producer.
-② The messages are ingested into Apache Kafka, acting as a distributed messaging system.
-③ Apache Spark Structured Streaming consumes data from Kafka, performs cleaning, transformation, and sentiment analysis (VADER & TextBlob).
-④ The enriched data is sent to Elasticsearch for storage and indexing.
-⑤ Data is then visualized in near real-time via Kibana and a custom React.js + Flask dashboard using WebSockets.
+The pipeline consists of five key stages:
+① **YouTube Live Chat** messages are retrieved using the YouTube Data API v3 by a Kafka producer.
+② Messages are sent to **Apache Kafka**, which serves as the message broker.
+③ **Apache Spark Structured Streaming** consumes the data, performs cleaning, transformation, and sentiment analysis (VADER & TextBlob).
+④ The processed data is stored and indexed in **Elasticsearch**.
+⑤ Results are visualized through **Kibana** and a custom **React.js + Flask** dashboard using WebSockets.
 
-* **[YouTube Data API v3](https://developers.google.com/youtube/v3)** – Retrieves live chat messages from YouTube (data source)
-* **[Apache Kafka](https://kafka.apache.org/)** – Message broker for real-time data ingestion
-* **[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)** – Stream processing engine for data cleaning, transformation, and sentiment analysis
-* **[VADER](https://github.com/cjhutto/vaderSentiment)** & **[TextBlob](https://textblob.readthedocs.io/)** – Lexicon-based sentiment analysis
-* **[Elasticsearch](https://www.elastic.co/elasticsearch/)** – Searchable data store for storing analyzed data
-* **[Kibana](https://www.elastic.co/kibana/)** – Real-time analytics visualization tool for querying Elasticsearch
+### Tools Used:
+* **[YouTube Data API v3](https://developers.google.com/youtube/v3)** – Data source for live chat messages
+* **[Apache Kafka](https://kafka.apache.org/)** – Distributed message broker for real-time ingestion
+* **[Apache Spark Structured Streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)** – Stream processing engine
+* **[VADER](https://github.com/cjhutto/vaderSentiment)** & **[TextBlob](https://textblob.readthedocs.io/)** – Lexicon-based sentiment analysis tools
+* **[Elasticsearch](https://www.elastic.co/elasticsearch/)** – Searchable data store
+* **[Kibana](https://www.elastic.co/kibana/)** – Visualization and analytics tool for Elasticsearch
 * **[Flask](https://flask.palletsprojects.com/)** – Lightweight backend API and WebSocket server
 * **[Socket.IO](https://socket.io/)** – Real-time communication between backend and frontend
-* **[React.js](https://reactjs.org/)** – Frontend framework for real-time sentiment dashboard
-* **[Recharts](https://recharts.org/)** – Charting library used in the React dashboard for visualizing sentiment trends
-* **[Docker](https://www.docker.com/)** – Containerized deployment with multi-service orchestration
+* **[React.js](https://reactjs.org/)** – Frontend framework for real-time UI
+* **[Recharts](https://recharts.org/)** – Charting library for visualizing sentiment trends
+* **[Docker](https://www.docker.com/)** – Containerized deployment with orchestration via Docker Compose
 
 ---
 
@@ -37,12 +38,12 @@ The data pipeline consists of five main stages:
 
 ### Prerequisites
 
-* Docker & Docker Compose
+* Docker & Docker Compose installed
 * YouTube Data API v3 key
 
 ### Installation
 
-1. Clone this repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
@@ -63,64 +64,58 @@ KAFKA_TOPIC=your_topic
 
 ```
 .
-├── docker-compose.yml               # Multi-container orchestration
-├── .env                             # Environment configuration
+├── docker-compose.yml             # Docker orchestration
+├── .env                           # API keys and configs
 │
-├── logs/                            # Log analysis scripts or logs
+├── logs/                          # Log files
 │
-├── producer/                       # Kafka producer to collect YouTube live chat
+├── producer/                      # Kafka producer for YouTube live chat
 │   ├── Dockerfile
 │   ├── producer.py
 │   └── requirements.txt
 │
-├── spark/                           # Spark job for sentiment analysis
-│   ├── Dockerfile                   
-│   ├── spark_job.py                 
-│   ├── requirements.txt            
-│   └── speed_test.txt              # Performance testing log
+├── spark/                         # Spark job for sentiment analysis
+│   ├── Dockerfile
+│   ├── spark_job.py
+│   ├── requirements.txt
+│   └── speed_test.txt             # Performance testing log
 │
-├── sentiment-backend/              # Flask backend (REST API & Socket.IO)
+├── sentiment-backend/            # Flask backend (REST API + Socket.IO)
 │   └── app.py
 │
-├── sentiment-ui/                   # React.js frontend for sentiment dashboard
+├── sentiment-ui/                 # React frontend
 │   ├── public/
 │   ├── src/
-│   ├── node_modules/
 │   ├── index.html
 │   ├── package.json
-│   ├── package-lock.json
-│   ├── vite.config.js
-│   ├── eslint.config.js
-│   ├── .gitignore
-│   └── README.md
+│   └── vite.config.js
 │
-├── img/                             # image assets
-│
-├── README.md                        # Main documentation
-├── How To Run (Eng).txt             # Step-by-step guide (English)
-└── How To Run (Idn).txt             # Step-by-step guide (Bahasa Indonesia)
+├── img/                           # Visual assets
+├── README.md                      # Main documentation
+├── How To Run (Eng).txt           # English guide
+└── How To Run (Idn).txt           # Indonesian guide
 ```
 
 ---
 
-## 📌 Usage
+## 📌 Usage Flow
 
-1. Kafka producer collects YouTube Live Chat using the Data API v3.
-2. Chat messages are streamed to Kafka topics in real-time.
-3. Spark Structured Streaming processes messages and performs sentiment analysis.
-4. Results are indexed into Elasticsearch.
-5. React + Socket.IO dashboard visualizes data in near real-time.
-6. Kibana dashboard allows for deeper historical analysis.
+1. Kafka producer collects live chat messages via YouTube API
+2. Messages are streamed to Kafka topics
+3. Spark consumes messages and applies sentiment analysis
+4. Processed data is sent to Elasticsearch
+5. React dashboard displays data in near real-time via Socket.IO
+6. Kibana provides advanced historical analysis and search capabilities
 
 ---
 
 ## 📊 Features
 
-* ⏱️ Near real-time ingestion of YouTube Live Chat messages
-* 🔄 Stream processing using Kafka & Spark Structured Streaming
-* 💬 Sentiment classification via VADER and TextBlob
-* 📈 Live dashboard using React + Socket.IO
-* 📊 Historical and advanced analytics via Kibana
+* ⏱️ Near real-time ingestion of YouTube live chat
+* 🔄 Stream processing via Kafka and Spark
+* 💬 Sentiment analysis using VADER & TextBlob
+* 📈 Live sentiment dashboard (React + Socket.IO)
+* 📊 Historical analytics and search with Kibana
 
 ![web](https://github.com/user-attachments/assets/d3216a0b-ca47-41ec-a1fe-d4fc794a9c1d)
 ![web2](https://github.com/user-attachments/assets/f4719a60-070e-464e-a117-ef849e745a9e)
@@ -129,9 +124,9 @@ KAFKA_TOPIC=your_topic
 
 ---
 
-## 🧪 Testing and Performance
+## 🧪 Testing & Performance
 
-The system has been tested with high-traffic YouTube live streams:
+The system has been benchmarked on high-traffic YouTube live streams:
 
 | Metric                      | Result                      |
 | --------------------------- | --------------------------- |
@@ -147,15 +142,15 @@ The system has been tested with high-traffic YouTube live streams:
 ## 🔮 Future Improvements
 
 * 🧠 Integrate deep learning models (e.g., BERT, RoBERTa)
-* 🔍 Replace API polling with WebSocket or scraping approach
-* ⚙️ Migrate from Spark to Flink for lower-latency streaming
+* 🔍 Explore WebSocket or scraping to bypass API polling
+* ⚙️ Migrate to Apache Flink for lower-latency stream processing
 
 ---
 
-## ⚠️ Important Notes
+## ⚠️ Notes
 
-* Requires valid **YouTube Data API v3** key
-* Configuration via `.env` file (API key, video ID, Kafka topic, etc.)
+* Requires a valid **YouTube Data API v3** key
+* All credentials configured via `.env` file
 
 ---
 
@@ -165,7 +160,7 @@ The system has been tested with high-traffic YouTube live streams:
 
 This project is licensed under a **Custom Private License**:
 
-* For **personal, non-commercial use only**.
-* Redistribution, sublicensing, or commercial usage is **not permitted**.
+* For **personal, non-commercial use only**
+* Redistribution, sublicensing, or commercial use is **prohibited**
 
-Copyright © 2025 Andrew Suadnya
+© 2025 Andrew Suadnya
